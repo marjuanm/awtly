@@ -1,6 +1,31 @@
 # Awtly
 Awtly is an ongoing project still in a very preliminary version.
 
-The goal is to create a programming language that is very easy to learn, inspired by Python, Lua, and others, which will allow creating PHP projects from simple to complex with instructions and methodologies that are easy to understand.
+The goal is create a programming language that is very easy to learn, inspired by Python, Lua, and others, which will allow creating PHP projects from simple to complex with instructions and methodologies that are easy to understand.
 
-The goal is someday to be able to create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
+The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
+
+-----------------------------------------------
+
+To run Awtly, it's necessary to have Python installed (I currently have version 3.14, you can download it from this URL https://www.python.org/downloads/ and select the desired version).
+
+With Python already installed, and in the case of Microsoft Windows, we will open the command interface or command prompt (or simply by typing cmd in the start menu search), we will navigate to the folder where we have the Awtly files and type: python awtly.py
+
+If we do not specify any parameter, we will get the following message: "Invalid number of parameters." Possible parameters (this may change in the future):
+
+* python awtly.py new projectname
+  It will create a new Awtly project in the current folder, in future versions we will be able to specify the path where to create the project and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
+
+For now we will only receive the message "I will create the project 'projectname'".
+
+* python awtly.py delete projectname
+It will delete an Awtly project in the current folder; in future versions, we will be able to specify the path from which to delete the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
+
+For now we will only receive the message "I will delete the project 'projectname'".
+
+* python awtly.py build projectname
+It will convert an Awtly project in the current folder to its PHP equivalent, allowing with a simple language to create websites and applications without getting into many complications of some PHP frameworks.
+
+In future versions, we will be able to specify the path where to compile the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
+
+For now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
