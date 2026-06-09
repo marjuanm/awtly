@@ -29,3 +29,7 @@ It will convert an Awtly project in the current folder to its PHP equivalent, al
 In future versions, we will be able to specify the path where to compile the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
 
 For now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
+
+-----------------------------------------------
+
+For now, Awtly is only being developed on Microsoft Windows, it is likely that in a few weeks testing will begin on some Linux distribution to ensure that it works well. We will inform about it in due course.
