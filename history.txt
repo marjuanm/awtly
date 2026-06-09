@@ -1,0 +1,5 @@
+0.1.0
+
+- The Awtly project begins, it aims to create a programming language that is easy to learn and implement, but that transpiles to PHP with the ability to create advanced projects with little effort.
+- First implementation in Python, it already detects the basic commands to run the transpiler (new, delete, and build), although for now they do nothing.
+- The first message translator was created to display notices in the operating system's language.
