@@ -1,3 +1,9 @@
+0.1.1
+
+- Minor fixes: The "Help" command (help, /?, and -h) has been implemented displaying general help on the commands supported by Awtly.
+- The -v command has been implemented to display the current Awtly version.
+- Awtly now checks if basic commands are incomplete and suggests using the "Help" command to ensure the user types the commands correctly.
+
 0.1.0
 
 - The Awtly project begins, it aims to create a programming language that is easy to learn and implement, but that transpiles to PHP with the ability to create advanced projects with little effort.

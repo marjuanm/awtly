@@ -7,16 +7,35 @@ import sys
 
 from messages import MSG
 from translations import getTranslation
-from commands import newProject, deleteProject, buildProject
+from commands import newProject, deleteProject, buildProject, help, version
    
 # sys.argv[0] program name ("awtly.py")
-# sys.argv[1] first parameter ("new/delete/build")
+# sys.argv[1] first parameter ("new/delete/build/help")
 # sys.argv[2] second parameter (project name)
 
 if len(sys.argv) <= 2:
+    
+  if len(sys.argv) <= 1:
 
-  msg = getTranslation(MSG.INVALIDPARAMSNUMBER)
-  print(msg)
+    msg = getTranslation(MSG.INVALIDPARAMSNUMBER)
+    print(msg)
+    
+  else:
+      
+    cmd = sys.argv[1]
+      
+    if cmd.lower() == "help" or cmd.lower() == "/?" or cmd.lower() == "-h":
+      help("")  
+    elif cmd.lower() == "-v":
+      version()        
+    else:
+        
+      if cmd.lower() == "new" or cmd.lower() == "delete" or cmd.lower() == "build":
+        msg = getTranslation(MSG.INCOMPLETECOMMAND)
+      else:
+        msg = getTranslation(MSG.UNKNOWNCOMMAND)
+      
+      print(msg)
   
 else:
     
@@ -28,9 +47,16 @@ else:
   elif cmd.lower() == "delete":
     deleteProject(projname)    
   elif cmd.lower() == "build":
-    buildProject(projname)    
+    buildProject(projname)
+  elif cmd.lower() == "help" or cmd.lower() == "/?" or cmd.lower() == "-h":
+      
+    if cmd.lower() == "/?":
+      help("")
+    else:
+      help(projname.replace("'", ""))    
+  
   else:
     
-    msg = getTranslation(MSG.INVALIDPARAMETER)
+    msg = getTranslation(MSG.UNKNOWNCOMMAND)
     print(msg)
   
