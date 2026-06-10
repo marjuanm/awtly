@@ -30,6 +30,14 @@ In future versions, we will be able to specify the path where to compile the pro
 
 For now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
 
+* python awtly.py help ("/?" and "-h" are possible variations)
+This will display specific help if you type the name of a command after the command "help" or "-h" (for example, "awtly help new" or "awtly -h new").
+
+If you only type "help", "/?", or just "-h", it will display general help for all commands supported by Awtly.
+
+* python awtly.py -v
+This will display information about the current version of the Awtly IDE.
+
 -----------------------------------------------
 
 For now, Awtly is only being developed on Microsoft Windows, it is likely that in a few weeks testing will begin on some Linux distribution to ensure that it works well. We will inform about it in due course.
