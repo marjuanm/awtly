@@ -1,3 +1,5 @@
+from typing import Final
+
 PROJECT_NAME: Final = "Awtly"
 PROJECT_SHORT_NAME: Final = "Awtly"
 PROJECT_VERSION: Final = "0.1.1"

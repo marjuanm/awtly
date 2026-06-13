@@ -2,7 +2,7 @@ import locale
 
 from messages import MSG
 from translations import getTranslation
-from gmodule import getPath
+from gmodule import getPath, getOS
 from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
 
 # Purpose: Create a new project
@@ -11,7 +11,7 @@ from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT
 # Last modified date: 12/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def newProject(projname):
-  print("Creare el proyecto '" + projname + "'\nLa ruta actual es: " + getPath())
+  print("Creare el proyecto '" + projname + "'\nLa ruta actual es: " + getPath() + "\nCon sistema operativo: " + getOS())
   
 # Purpose: Delete a project
 # Created date: 08/06/2026
@@ -19,7 +19,7 @@ def newProject(projname):
 # Last modified date: 12/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def deleteProject(projname):
-  print("Borraré el proyecto '" + projname + "\nLa ruta actual es: " + getPath())
+  print("Borraré el proyecto '" + projname + "\nLa ruta actual es: " + getPath() + "\nCon sistema operativo: " + getOS())
   
 # Purpose: Build a project (transpiler action)
 # Created date: 08/06/2026
@@ -27,7 +27,7 @@ def deleteProject(projname):
 # Last modified date: 12/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def buildProject(projname):
-  print("Convertiré el proyecto '" + projname + "' en su equivalente php\nLa ruta actual es: " + getPath())
+  print("Convertiré el proyecto '" + projname + "' en su equivalente php\nLa ruta actual es: " + getPath() + "\nCon sistema operativo: " + getOS())
   
 # Purpose: Show version
 # Created date: 10/06/2026

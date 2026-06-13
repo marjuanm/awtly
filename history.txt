@@ -1,6 +1,8 @@
 0.1.2
 
 - Implementation of the getPath function to obtain the path from where the awtly.py script is executed; checks will be made to test that it works on Linux.
+-The getPath function works perfectly on Windows, but on Linux the script started producing errors; you have to define 'Final' for constants using 'from typing import Final'.
+- The getOS function is implemented to obtain the operating system type, which is necessary to verify the absolute paths provided (or not) when executing the new, delete and build commands.
 
 0.1.1
 
