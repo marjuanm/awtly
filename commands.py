@@ -9,7 +9,7 @@ from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT
 # Purpose: Create a new project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 12/06/2026
+# Last modified date: 13/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def newProject(projname):
     
@@ -49,11 +49,11 @@ def newProject(projname):
               shutil.rmtree(newpath)
             except PermissionError:
               
-              print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+              print("----------------------------------------" + getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
               createproject = False
             
           else:  
-            print(getTranslation(MSG.NOCONFIRMOVERWRITEPROJECT))  
+            createproject = False
           
         else:
         
@@ -65,10 +65,10 @@ def newProject(projname):
       try:
           
         newpath.mkdir(parents=True, exist_ok=True)
-        print("He creado el proyecto '" + projname_clean + "'\nLa ruta actual es: " + str(newpath))
+        print("----------------------------------------\n\nHe creado el proyecto '" + projname_clean + "'\nLa ruta actual es: " + str(newpath))
         
       except PermissionError:
-        print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+        print("----------------------------------------" + getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
             
 # Purpose: Delete a project
 # Created date: 08/06/2026

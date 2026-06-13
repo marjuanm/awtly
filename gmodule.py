@@ -1,4 +1,6 @@
 from pathlib import Path
+from messages import MSG
+from translations import getTranslation
 
 # Purpose: Update current path
 # Created date: 12/06/2026
