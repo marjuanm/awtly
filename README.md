@@ -37,7 +37,3 @@ If you only type "help", "/?", or just "-h", it will display general help for al
 
 * python awtly.py -v
 This will display information about the current version of the Awtly IDE.
-
------------------------------------------------
-
-For now, Awtly is only being developed on Microsoft Windows, it is likely that in a few weeks testing will begin on some Linux distribution to ensure that it works well. We will inform about it in due course.
