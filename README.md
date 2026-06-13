@@ -16,7 +16,7 @@ If we don't specify any parameter, we will get the following message: "Invalid n
 * python awtly.py new projectname
   It will create a new Awtly project in the current folder, in future versions we will be able to specify the path where to create the project and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
 
-For now we will only receive the message "I will create the project 'projectname'".
+The system now checks if the project to be created exists in the local folder, allowing the user to proceed or not. For now, it continues to display the message "I will create the project 'projectname'" if the user wishes to continue.
 
 * python awtly.py delete projectname
 It will delete an Awtly project in the current folder; in future versions, we will be able to specify the path from which to delete the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
