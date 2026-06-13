@@ -1,8 +1,9 @@
-import locale
+import shutil
 
+from pathlib import Path
 from messages import MSG
+from gmodule import getPath
 from translations import getTranslation
-from gmodule import getPath, getOS
 from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
 
 # Purpose: Create a new project
@@ -11,15 +12,71 @@ from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT
 # Last modified date: 12/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def newProject(projname):
-  print("Creare el proyecto '" + projname + "'\nLa ruta actual es: " + getPath() + "\nCon sistema operativo: " + getOS())
+    
+  path = getPath()
+  createproject = True  
+  projname_clean = projname.strip()
   
+  if "\\" in projname_clean or "/" in projname_clean:
+    
+    newpath = Path(projname_clean)
+    
+    if newpath.suffix.strip() != "":
+        
+      createproject = False
+      print(getTranslation(MSG.INVALIDPROJECTNAME))
+        
+  else:
+      
+    newpath = Path(path.strip() + "/" + projname_clean.strip())
+
+    if newpath.suffix.strip() != "":
+        
+      createproject = False
+      print(getTranslation(MSG.INVALIDPROJECTNAME))
+    
+    else:
+        
+      if newpath.exists():
+    
+        if newpath.is_dir():
+        
+          reply = input(getTranslation(MSG.CONFIRMOVERWRITEPROJECT)).strip().lower()
+        
+          if reply in ['s', 'y']:
+        
+            try:  
+              shutil.rmtree(newpath)
+            except PermissionError:
+              
+              print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+              createproject = False
+            
+          else:  
+            print(getTranslation(MSG.NOCONFIRMOVERWRITEPROJECT))  
+          
+        else:
+        
+          print(getTranslation(MSG.INVALIDPROJECTNAME))
+          createproject = False
+        
+    if createproject ==  True:
+    
+      try:
+          
+        newpath.mkdir(parents=True, exist_ok=True)
+        print("He creado el proyecto '" + projname_clean + "'\nLa ruta actual es: " + str(newpath))
+        
+      except PermissionError:
+        print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+            
 # Purpose: Delete a project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
 # Last modified date: 12/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def deleteProject(projname):
-  print("Borraré el proyecto '" + projname + "\nLa ruta actual es: " + getPath() + "\nCon sistema operativo: " + getOS())
+  print("Borraré el proyecto '" + projname + "\nLa ruta actual es: " + getPath())
   
 # Purpose: Build a project (transpiler action)
 # Created date: 08/06/2026
@@ -27,7 +84,7 @@ def deleteProject(projname):
 # Last modified date: 12/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def buildProject(projname):
-  print("Convertiré el proyecto '" + projname + "' en su equivalente php\nLa ruta actual es: " + getPath() + "\nCon sistema operativo: " + getOS())
+  print("Convertiré el proyecto '" + projname + "' en su equivalente php\nLa ruta actual es: " + getPath())
   
 # Purpose: Show version
 # Created date: 10/06/2026
