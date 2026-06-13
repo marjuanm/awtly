@@ -8,6 +8,7 @@ from constants import PROJECT_SHORT_NAME
 # Created by username: Juan Manuel Mar Hdz.
 # Last modified date: 08/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
+# Thanks to gemini
 def getTranslation(msgid):
 
   lang, encoding = locale.getlocale()

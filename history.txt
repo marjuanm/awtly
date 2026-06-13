@@ -1,3 +1,7 @@
+0.1.2
+
+- Implementation of the getPath function to obtain the path from where the awtly.py script is executed; checks will be made to test that it works on Linux.
+
 0.1.1
 
 - Minor fixes: The "Help" command (help, /?, and -h) has been implemented displaying general help on the commands supported by Awtly.
