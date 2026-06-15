@@ -1,5 +1,5 @@
 <center><img src="https://github.com/marjuanm/awtly/blob/main/images/pet.jpg" style="width: 100%; max-width: 600px; height: auto;" alt="Awtly's pet" border="0"></center>
-<div style="text-align:center;">
+<div style="text-align:center; margin: auto;">
     <img src="https://www.busquedaweb.com/openprojects/awtly/release.png" height="20" alt="Release version">
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
