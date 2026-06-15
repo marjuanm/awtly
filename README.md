@@ -1,17 +1,9 @@
 <center><img src="https://github.com/marjuanm/awtly/blob/main/images/pet.jpg" style="width: 100%; max-width: 600px; height: auto;" alt="Awtly's pet" border="0"></center>
-<table align="center" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td valign="middle" align="center">
-<img src="https://www.busquedaweb.com/openprojects/awtly/release.png" width="auto" height="20" alt="Release version" border="0">
-</td>
-<td valign="middle" align="center">
-<a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" width="auto" height="20" alt="Download current version" border="0"></a>
-</td>
-<td valign="middle" align="center">
-<a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" width="auto" height="20" alt="Project's license" border="0"></a>
-</td>
-</tr>
-</table>
+<div style="text-align:center;">
+    <img src="https://www.busquedaweb.com/openprojects/awtly/release.png" height="20" alt="Release version">
+    <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
+    <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
+</div>
 
 # Awtly
 Awtly is an ongoing project still in a very preliminary version.
