@@ -5,7 +5,7 @@ The goal is create a programming language that is very easy to learn, inspired b
 
 The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
 
------------------------------------------------
+# Updates for the latest version (0.1.25):
 
 To run Awtly, it's necessary to have Python installed (I currently have version 3.14, you can download it from this URL https://www.python.org/downloads/ and select the desired version).
 
