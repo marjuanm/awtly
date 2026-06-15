@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png" width="auto" height="331" alt="Awtly's pet">
+    <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png" width="auto" height="331" alt="Awtly's pet"><br>
     <img src="https://www.busquedaweb.com/openprojects/awtly/release.png" height="20" alt="Release version">
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
