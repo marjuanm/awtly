@@ -1,9 +1,9 @@
 <center>
 <img src="https://github.com/marjuanm/awtly/blob/main/images/pet.jpg" style="width: 100%; max-width: 600px; height: auto;" alt="Awtly's pet" border="0">
 <br>
-<img src="https://github.com/marjuanm/awtly/blob/main/images/release.jpg" style="width: 100%; max-width: 94px; height: auto; padding-right: 10px; padding-bottom: 10px;" alt="Release version" border="0">
-<a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://github.com/marjuanm/awtly/tree/main/images/download.png" style="width: 100%; max-width: 94px; height: auto; padding-right: 10px; padding-bottom: 10px;" alt="Download current version" border="0"></a>
-<a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://github.com/marjuanm/awtly/blob/main/images/license.jpg" style="width: 100%; max-width: 94px; height: auto; padding-right: 10px; padding-bottom: 10px;" alt="Project's license" border="0"></a>
+<img src="https://www.busquedaweb.com/openprojects/awtly/release.png" style="width: 100%; max-width: 94px; height: auto; padding-right: 10px; padding-bottom: 10px;" alt="Release version" border="0">
+<a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" style="width: 100%; max-width: 94px; height: auto; padding-right: 10px; padding-bottom: 10px;" alt="Download current version" border="0"></a>
+<a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" style="width: 100%; max-width: 94px; height: auto; padding-right: 10px; padding-bottom: 10px;" alt="Project's license" border="0"></a>
 </center>
 
 # Awtly
