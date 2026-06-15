@@ -1,9 +1,17 @@
-<center>
-<img src="https://github.com/marjuanm/awtly/blob/main/images/pet.jpg" style="width: 100%; max-width: 600px; height: auto;" alt="Awtly's pet" border="0">
+<center><img src="https://github.com/marjuanm/awtly/blob/main/images/pet.jpg" style="width: 100%; max-width: 600px; height: auto;" alt="Awtly's pet" border="0"></center>
+<table align="center">
+<tr>
+<td valign="middle" align="center">
 <img src="https://www.busquedaweb.com/openprojects/awtly/release.png" width="auto" height="20" alt="Release version" border="0">
+</td>
+<td valign="middle" align="center">
 <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" width="auto" height="20" alt="Download current version" border="0"></a>
+</td>
+<td valign="middle" align="center">
 <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" width="auto" height="20" alt="Project's license" border="0"></a>
-</center>
+</td>
+</tr>
+</table>
 
 # Awtly
 Awtly is an ongoing project still in a very preliminary version.
