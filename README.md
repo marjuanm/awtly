@@ -5,14 +5,12 @@
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
 
-# Awtly
-Awtly is an ongoing project still in a very preliminary version.
-
-The goal is create a programming language that is very easy to learn, inspired by Python, Lua, and others, which will allow creating PHP projects from simple to complex with instructions and methodologies that are easy to understand.
+# Whats is Awtly?
+Awtly is an ongoing project still in a very preliminary version, the goal is create a programming language that is very easy to learn, inspired by <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a>, <a href="https://en.wikipedia.org/wiki/Lua" target="_blank">Lua</a>, and others, which will allow creating PHP projects from simple to complex with instructions and methodologies that are easy to understand.
 
 The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
 
-# Updates for the latest version (0.1.25):
+# Building
 
 Requirements: Python or superior, download from https://www.python.org/downloads/. On Windows open Command Prompt, navigate to the Awtly folder, and run the command "python awtly.py", on Linux terminal type "python3 awtly.py".
 
@@ -20,8 +18,6 @@ If we don't specify any parameter, we will get the following message: "Invalid n
 
 * python awtly.py new projectname
   It will create a new Awtly project in the current folder, in future versions we will be able to specify the path where to create the project and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
-
-The system now checks if the project to be created exists in the local folder, allowing the user to proceed or not. For now, it continues to display the message "I will create the project 'projectname'" if the user wishes to continue.
 
 * python awtly.py delete projectname
 It will delete an Awtly project in the current folder; in future versions, we will be able to specify the path from which to delete the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
@@ -40,5 +36,8 @@ This will display specific help if you type the name of a command after the comm
 
 If you only type "help", "/?", or just "-h", it will display general help for all commands supported by Awtly.
 
+# Updates for the latest version (0.1.25):
+
+The system now checks if the project to be created exists in the local folder at use "new" command, allowing the user to proceed or not. For now, it continues to display the message "I will create the project 'projectname'" if the user wishes to continue.
 * python awtly.py -v
 This will display information about the current version of the Awtly IDE.
