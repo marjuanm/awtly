@@ -10,6 +10,10 @@ Awtly is an ongoing project still in a very preliminary version, the goal is cre
 
 The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
 
+# Updates for the latest version (0.1.25):
+
+The system now checks if the project to be created exists in the local folder at use "new" command, allowing the user to proceed or not. For now, it continues to display the message "I will create the project 'projectname'" if the user wishes to continue.
+
 # Building and how to use
 
 Requirements: Python or superior, download from https://www.python.org/downloads/. On Windows open Command Prompt, navigate to the Awtly folder, and run the command "python awtly.py", on Linux terminal type "python3 awtly.py".
@@ -38,7 +42,3 @@ If you only type "help", "/?", or just "-h", it will display general help for al
 
 * python awtly.py -v
 This will display information about the current version of the Awtly IDE.
-
-# Updates for the latest version (0.1.25):
-
-The system now checks if the project to be created exists in the local folder at use "new" command, allowing the user to proceed or not. For now, it continues to display the message "I will create the project 'projectname'" if the user wishes to continue.
