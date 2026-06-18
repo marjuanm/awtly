@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png?v=2" width="auto" height="331" alt="Awtly's pet"><br>
-    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=1" height="20" alt="Release version"></a>
+    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=2" height="20" alt="Release version"></a>
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
@@ -10,9 +10,9 @@ Awtly is an ongoing project still in a very preliminary version, the goal is cre
 
 The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
 
-# Updates for the latest version (0.1.25):
+# Updates for the latest version (0.1.3):
 
-The system now checks if the project to be created exists in the local folder at use "new" command, allowing the user to proceed or not. For now, it continues to display the message "I will create the project 'projectname'" if the user wishes to continue.
+Full implementation of the "new" command: it now creates the project folder and files, organized into subfolders, and adds some basic templates to get you started. Some bug fixes or improvements may be made in the future.
 
 # Building and how to use
 
