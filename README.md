@@ -24,21 +24,13 @@ If we don't specify any parameter, we will get the following message: "Invalid n
   It will create a new Awtly project in the current folder, in future versions we will be able to specify the path where to create the project and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
 
 * python awtly.py delete projectname
-It will delete an Awtly project in the current folder; in future versions, we will be able to specify the path from which to delete the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
-
-For now we will only receive the message "I will delete the project 'projectname'".
+It will delete an Awtly project in the current folder; in future versions, we will be able to specify the path from which to delete the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE. For now we will only receive the message "I will delete the project 'projectname'".
 
 * python awtly.py build projectname
-It will convert an Awtly project in the current folder to its PHP equivalent, allowing with a simple language to create websites and applications without getting into many complications of some PHP frameworks.
-
-In future versions, we will be able to specify the path where to compile the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE.
-
-For now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
+It will convert an Awtly project in the current folder to its PHP equivalent, allowing with a simple language to create websites and applications without getting into many complications of some PHP frameworks. In future versions, we will be able to specify the path where to compile the project, and perhaps in the future Awtly can be used with the system PATH variable so as not to depend on the installation folder to run the IDE; for now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
 
 * python awtly.py help ("/?" and "-h" are possible variations)
-This will display specific help if you type the name of a command after the command "help" or "-h" (for example, "awtly help new" or "awtly -h new").
-
-If you only type "help", "/?", or just "-h", it will display general help for all commands supported by Awtly.
+This will display specific help if you type the name of a command after the command "help" or "-h" (for example, "awtly help new" or "awtly -h new"). If you only type "help", "/?", or just "-h", it will display general help for all commands supported by Awtly.
 
 * python awtly.py -v
 This will display information about the current version of the Awtly IDE.
