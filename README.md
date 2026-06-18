@@ -1,6 +1,6 @@
 <p align="center">
-    <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png" width="auto" height="331" alt="Awtly's pet"><br>
-    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png" height="20" alt="Release version"></a>
+    <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png?v=2" width="auto" height="331" alt="Awtly's pet"><br>
+    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=1" height="20" alt="Release version"></a>
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
@@ -9,6 +9,10 @@
 Awtly is an ongoing project still in a very preliminary version, the goal is create a programming language that is very easy to learn, inspired by <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a>, <a href="https://en.wikipedia.org/wiki/Lua" target="_blank">Lua</a>, and others, which will allow creating PHP projects from simple to complex with instructions and methodologies that are easy to understand.
 
 The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
+
+# Updates for the latest version (0.1.25):
+
+The system now checks if the project to be created exists in the local folder at use "new" command, allowing the user to proceed or not. For now, it continues to display the message "I will create the project 'projectname'" if the user wishes to continue.
 
 # Building and how to use
 
@@ -38,7 +42,3 @@ If you only type "help", "/?", or just "-h", it will display general help for al
 
 * python awtly.py -v
 This will display information about the current version of the Awtly IDE.
-
-# Updates for the latest version (0.1.25):
-
-The system now checks if the project to be created exists in the local folder at use "new" command, allowing the user to proceed or not. For now, it continues to display the message "I will create the project 'projectname'" if the user wishes to continue.
