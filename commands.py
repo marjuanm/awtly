@@ -1,9 +1,11 @@
 import shutil
+import locale
 
 from pathlib import Path
 from messages import MSG
 from gmodule import getPath
 from translations import getTranslation
+from newprojectstructure import NPRJSTRUCT
 from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
 
 # Purpose: Create a new project
@@ -65,7 +67,52 @@ def newProject(projname):
       try:
           
         newpath.mkdir(parents=True, exist_ok=True)
-        print("----------------------------------------\n\nHe creado el proyecto '" + projname_clean + "'\nLa ruta actual es: " + str(newpath))
+        
+        #create basic files to current project
+        
+        folder = newpath / "templates" #User templates folder
+        folder.mkdir(parents=True, exist_ok=True)
+        
+        folder = newpath / "assets/css" #Assets css folder
+        folder.mkdir(parents=True, exist_ok=True)
+        
+        folder = newpath / "assets/js" #Assets javascripts folder
+        folder.mkdir(parents=True, exist_ok=True)
+        
+        folder = newpath / "assets/images" #Assets images folder
+        folder.mkdir(parents=True, exist_ok=True)
+        
+        file = newpath / "project.cfg" #Main project
+        file.write_text(NPRJSTRUCT.PROJECT, encoding="utf-8")
+        
+        file = newpath / "pages/index.awui" #Awtly user interfaz
+        file.parent.mkdir(parents=True, exist_ok=True)
+        file.write_text(NPRJSTRUCT.DOCUMENT, encoding="utf-8")
+        
+        file = newpath / "pages/index.awcp" #Awtly control properties
+        file.parent.mkdir(parents=True, exist_ok=True)
+        file.write_text("/* TODO: Add control properties here */\n\n", encoding="utf-8")
+        
+        file = newpath / "logic/index.awsc" #Awtly source code
+        file.parent.mkdir(parents=True, exist_ok=True)
+        file.write_text("/* TODO: Add logic and events here */\n\n", encoding="utf-8")
+        
+        file = newpath / "config/routes.awrt" #Awtly routes
+        file.parent.mkdir(parents=True, exist_ok=True)
+        file.write_text("/* TODO: Add pages routes and redirections here */\n\n", encoding="utf-8")
+        
+        file = newpath / "config/db.cfg" #Database configuration
+        file.parent.mkdir(parents=True, exist_ok=True)
+        file.write_text(NPRJSTRUCT.DB, encoding="utf-8")
+        
+        file = newpath / "config/cache.cfg" #Cache configuration
+        file.parent.mkdir(parents=True, exist_ok=True)
+        file.write_text(NPRJSTRUCT.CACHE, encoding="utf-8")
+        
+        file = newpath / "assets/css/styles.css" #Project styles
+        file.write_text(NPRJSTRUCT.STYLES, encoding="utf-8")
+        
+        print("----------------------------------------\n" + getTranslation(MSG.CREATINGPROJECTFILES) + "\n" + getTranslation(MSG.DONE))
         
       except PermissionError:
         print("----------------------------------------" + getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))

@@ -1,3 +1,9 @@
+0.1.3
+
+- First implementation of project creation using the "new" command; it now generates the basic files for a new project.
+
+- Improvements to the "new" command: it not only generates the basic files (which were empty in the previous step), but also organizes them into folders for better project readability and injects basic templates if needed.
+
 0.1.25
 
 - Corrections to the "new" command: it now asks for confirmation if you want to continue if the project already exists. This was already implemented, but the dialog text has been simplified.

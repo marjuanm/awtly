@@ -6,7 +6,7 @@ from constants import PROJECT_SHORT_NAME
 # Purpose: Get translation
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 13/06/2026
+# Last modified date: 17/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 # Thanks to gemini
 def getTranslation(msgid):
@@ -37,10 +37,10 @@ def getTranslation(msgid):
       return "El nombre de la carpeta para su proyecto no debe contener extensiones de archivos."
     elif msgid == MSG.FOLDERPROJECTNAME:
       return "Carpeta del proyecto"
-    elif msgid == MSG.PATH:
-      return "Ruta"
-    elif msgid == MSG.YOURREPLY:
-      return "¿Borrar la carpeta del proyecto y crear todo de nuevo? (s/n): " 
+    elif msgid == MSG.CREATINGPROJECTFILES:
+      return "Creando estructura del proyecto"
+    elif msgid == MSG.DONE:
+      return "Listo." 
     else:
       return "ID de traducción inválido"
       
@@ -68,9 +68,9 @@ def getTranslation(msgid):
       return "The folder name for your project should not contain file extensions."
     elif msgid == MSG.FOLDERPROJECTNAME:
       return "Folder project name"
-    elif msgid == MSG.PATH:
-      return "Path"
-    elif msgid == MSG.YOURREPLY:
-      return "Should I delete the project folder and recreate it? (y/n): " 
+    elif msgid == MSG.CREATINGPROJECTFILES:
+      return "Creating project structure"
+    elif msgid == MSG.DONE:
+      return "Done." 
     else:
       return "Invalid ID translator"
