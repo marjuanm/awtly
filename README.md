@@ -14,6 +14,12 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 
 Full implementation of the "new" command: it now creates the project folder and files, organized into subfolders, and adds some basic templates to get you started. Some bug fixes or improvements may be made in the future.
 
+# License:
+
+Awtly is released under GPL-3 license, but is provided "as is". The compiler may contain bugs that could generate incorrect source code, corrupted output files, or unexpected behavior. The author is not responsible for accidental deletion of files or information profiles; we will be regularly updating the project to correct errors and thereby minimize the possibility of data loss.
+
+Always keep backups of your projects and important information.
+
 # Building and how to use
 
 Requirements: Python or superior, download from https://www.python.org/downloads/. On Windows open Command Prompt, navigate to the Awtly folder, and run the command "python awtly.py", on Linux terminal type "python3 awtly.py".
