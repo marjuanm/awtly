@@ -5,13 +5,13 @@ from pathlib import Path
 from messages import MSG
 from gmodule import getPath
 from translations import getTranslation
-from newprojectstructure import NPRJSTRUCT
+from structures import NEWPROJECT
 from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
 
 # Purpose: Create a new project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 13/06/2026
+# Last modified date: 19/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def newProject(projname):
     
@@ -19,103 +19,102 @@ def newProject(projname):
   createproject = True  
   projname_clean = projname.strip()
   
+  # use the correct path
   if "\\" in projname_clean or "/" in projname_clean:
-    
     newpath = Path(projname_clean)
+  else:  
+    newpath = Path(path.strip() + "/" + projname_clean.strip())
     
-    if newpath.suffix.strip() != "":
+  if newpath.suffix.strip() != "":
         
-      createproject = False
-      print(getTranslation(MSG.INVALIDPROJECTNAME))
+    createproject = False
+    print(getTranslation(MSG.INVALIDPROJECTNAME))
         
   else:
-      
-    newpath = Path(path.strip() + "/" + projname_clean.strip())
-
-    if newpath.suffix.strip() != "":
         
-      createproject = False
-      print(getTranslation(MSG.INVALIDPROJECTNAME))
+    if newpath.exists():
     
-    else:
+      if newpath.is_dir():
         
-      if newpath.exists():
-    
-        if newpath.is_dir():
+        reply = input(getTranslation(MSG.CONFIRMOVERWRITEPROJECT)).strip().lower()
         
-          reply = input(getTranslation(MSG.CONFIRMOVERWRITEPROJECT)).strip().lower()
+        if reply in ['s', 'y']:
         
-          if reply in ['s', 'y']:
-        
-            try:  
-              shutil.rmtree(newpath)
-            except PermissionError:
+          try:  
+            shutil.rmtree(newpath)
+          except PermissionError:
               
-              print("----------------------------------------" + getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
-              createproject = False
-            
-          else:  
+            print("----------------------------------------")
+            print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
             createproject = False
-          
-        else:
-        
-          print(getTranslation(MSG.INVALIDPROJECTNAME))
+            
+        else:  
           createproject = False
-        
-    if createproject ==  True:
-    
-      try:
           
-        newpath.mkdir(parents=True, exist_ok=True)
+      else:
         
-        #create basic files to current project
+        print(getTranslation(MSG.INVALIDPROJECTNAME))
+        createproject = False
         
-        folder = newpath / "templates" #User templates folder
-        folder.mkdir(parents=True, exist_ok=True)
+  if createproject ==  True:
+    
+    try:
+          
+      newpath.mkdir(parents=True, exist_ok=True)
         
-        folder = newpath / "assets/css" #Assets css folder
-        folder.mkdir(parents=True, exist_ok=True)
+      #create basic files to current project
         
-        folder = newpath / "assets/js" #Assets javascripts folder
-        folder.mkdir(parents=True, exist_ok=True)
+      print("----------------------------------------")
+      print(getTranslation(MSG.CREATINGPROJECTFILES))
+
+      folder = newpath / "templates" #User templates folder
+      folder.mkdir(parents=True, exist_ok=True)
         
-        folder = newpath / "assets/images" #Assets images folder
-        folder.mkdir(parents=True, exist_ok=True)
+      folder = newpath / "assets/css" #Assets css folder
+      folder.mkdir(parents=True, exist_ok=True)
         
-        file = newpath / "project.cfg" #Main project
-        file.write_text(NPRJSTRUCT.PROJECT, encoding="utf-8")
+      folder = newpath / "assets/js" #Assets javascripts folder
+      folder.mkdir(parents=True, exist_ok=True)
         
-        file = newpath / "pages/index.awui" #Awtly user interfaz
-        file.parent.mkdir(parents=True, exist_ok=True)
-        file.write_text(NPRJSTRUCT.DOCUMENT, encoding="utf-8")
+      folder = newpath / "assets/images" #Assets images folder
+      folder.mkdir(parents=True, exist_ok=True)
         
-        file = newpath / "pages/index.awcp" #Awtly control properties
-        file.parent.mkdir(parents=True, exist_ok=True)
-        file.write_text("/* TODO: Add control properties here */\n\n", encoding="utf-8")
+      file = newpath / "project.cfg" #Main project
+      file.write_text(NEWPROJECT.PROJECT, encoding="utf-8")
         
-        file = newpath / "logic/index.awsc" #Awtly source code
-        file.parent.mkdir(parents=True, exist_ok=True)
-        file.write_text("/* TODO: Add logic and events here */\n\n", encoding="utf-8")
+      file = newpath / "pages/index.awui" #Awtly user interfaz
+      file.parent.mkdir(parents=True, exist_ok=True)
+      file.write_text(NEWPROJECT.DOCUMENT, encoding="utf-8")
         
-        file = newpath / "config/routes.awrt" #Awtly routes
-        file.parent.mkdir(parents=True, exist_ok=True)
-        file.write_text("/* TODO: Add pages routes and redirections here */\n\n", encoding="utf-8")
+      file = newpath / "pages/index.awcp" #Awtly control properties
+      file.parent.mkdir(parents=True, exist_ok=True)
+      file.write_text("/* TODO: Add control properties here */\n\n", encoding="utf-8")
         
-        file = newpath / "config/db.cfg" #Database configuration
-        file.parent.mkdir(parents=True, exist_ok=True)
-        file.write_text(NPRJSTRUCT.DB, encoding="utf-8")
+      file = newpath / "logic/index.awsc" #Awtly source code
+      file.parent.mkdir(parents=True, exist_ok=True)
+      file.write_text("/* TODO: Add logic and events here */\n\n", encoding="utf-8")
         
-        file = newpath / "config/cache.cfg" #Cache configuration
-        file.parent.mkdir(parents=True, exist_ok=True)
-        file.write_text(NPRJSTRUCT.CACHE, encoding="utf-8")
+      file = newpath / "config/routes.awrt" #Awtly routes
+      file.parent.mkdir(parents=True, exist_ok=True)
+      file.write_text("/* TODO: Add pages routes and redirections here */\n\n", encoding="utf-8")
         
-        file = newpath / "assets/css/styles.css" #Project styles
-        file.write_text(NPRJSTRUCT.STYLES, encoding="utf-8")
+      file = newpath / "config/db.cfg" #Database configuration
+      file.parent.mkdir(parents=True, exist_ok=True)
+      file.write_text(NEWPROJECT.DB, encoding="utf-8")
         
-        print("----------------------------------------\n" + getTranslation(MSG.CREATINGPROJECTFILES) + "\n" + getTranslation(MSG.DONE))
+      file = newpath / "config/cache.cfg" #Cache configuration
+      file.parent.mkdir(parents=True, exist_ok=True)
+      file.write_text(NEWPROJECT.CACHE, encoding="utf-8")
         
-      except PermissionError:
-        print("----------------------------------------" + getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+      file = newpath / "assets/css/styles.css" #Project styles
+      file.write_text(NEWPROJECT.STYLES, encoding="utf-8")
+        
+      print(getTranslation(MSG.DONE))
+        
+    except PermissionError:
+      
+      print("----------------------------------------")
+      print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
             
 # Purpose: Delete a project
 # Created date: 08/06/2026
