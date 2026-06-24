@@ -1,3 +1,10 @@
+0.1.5
+
+- Successfully tested on Linux: the "new" command can create folders with full paths to other folders; a header indicating the project name, license, and basic file details has been added to all .py files.
+
+- Implemented the "delete" command, which can remove a project folder—either from the location of the main Awtly script or from a specified path. Use with caution.
+
+
 0.1.4
 
 - Improvements to the index.awui file template. The format now allows for the creation of workspaces within the document.

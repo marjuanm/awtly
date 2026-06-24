@@ -1,3 +1,8 @@
+# Awtly - php transpiller util
+# Original file name: translations.py
+# Copyright (C) 2026 Juan Manuel Mar Hdz.
+# Licensed under GPL-3.0, see the license file on the root project structure for more information.
+
 import locale
 
 from messages import MSG
@@ -6,7 +11,7 @@ from constants import PROJECT_SHORT_NAME
 # Purpose: Get translation
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 17/06/2026
+# Last modified date: 24/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 # Thanks to gemini
 def getTranslation(msgid):
@@ -41,6 +46,10 @@ def getTranslation(msgid):
       return "Creando estructura del proyecto"
     elif msgid == MSG.DONE:
       return "Listo." 
+    elif msgid == MSG.CONFIRMDELETEPROJECT:
+      return "Borrar el proyecto\n¿Desea continuar? (s/n): "
+    elif msgid == MSG.PROJECTFOLDERNOTFOUND:
+      return "Proyecto no encontrado"
     else:
       return "ID de traducción inválido"
       
@@ -72,5 +81,9 @@ def getTranslation(msgid):
       return "Creating project structure"
     elif msgid == MSG.DONE:
       return "Done." 
+    elif msgid == MSG.CONFIRMDELETEPROJECT:
+      return "Delete the project\nDo you want continue? (y/n): "
+    elif msgid == MSG.PROJECTFOLDERNOTFOUND:
+      return "Project not found"
     else:
       return "Invalid ID translator"

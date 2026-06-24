@@ -1,3 +1,8 @@
+# Awtly - php transpiller util
+# Original file name: commands.py
+# Copyright (C) 2026 Juan Manuel Mar Hdz.
+# Licensed under GPL-3.0, see the license file on the root project structure for more information.
+
 import shutil
 import locale
 
@@ -11,7 +16,7 @@ from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT
 # Purpose: Create a new project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 19/06/2026
+# Last modified date: 24/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def newProject(projname):
     
@@ -40,6 +45,8 @@ def newProject(projname):
         
         if reply in ['s', 'y']:
         
+          # delete project folder first
+          
           try:  
             shutil.rmtree(newpath)
           except PermissionError:
@@ -88,15 +95,15 @@ def newProject(projname):
         
       file = newpath / "pages/index.awcp" #Awtly control properties
       file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text("/* TODO: Add control properties here */\n\n", encoding="utf-8")
+      file.write_text("/* TO DO: Add control properties here */\n\n", encoding="utf-8")
         
       file = newpath / "logic/index.awsc" #Awtly source code
       file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text("/* TODO: Add logic and events here */\n\n", encoding="utf-8")
+      file.write_text("/* TO DO: Add logic and events here */\n\n", encoding="utf-8")
         
       file = newpath / "config/routes.awrt" #Awtly routes
       file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text("/* TODO: Add pages routes and redirections here */\n\n", encoding="utf-8")
+      file.write_text("/* TO DO: Add pages routes and redirections here */\n\n", encoding="utf-8")
         
       file = newpath / "config/db.cfg" #Database configuration
       file.parent.mkdir(parents=True, exist_ok=True)
@@ -119,11 +126,49 @@ def newProject(projname):
 # Purpose: Delete a project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 12/06/2026
+# Last modified date: 24/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def deleteProject(projname):
-  print("Borraré el proyecto '" + projname + "\nLa ruta actual es: " + getPath())
+    
+  path = getPath()
+  projname_clean = projname.strip()
   
+  # use the correct path
+  if "\\" in projname_clean or "/" in projname_clean:
+    newpath = Path(projname_clean)
+  else:  
+    newpath = Path(path.strip() + "/" + projname_clean.strip())
+    
+  if newpath.suffix.strip() != "":
+    print(getTranslation(MSG.INVALIDPROJECTNAME))      
+  else:
+        
+    if newpath.exists():
+    
+      if newpath.is_dir():
+        
+        reply = input(getTranslation(MSG.CONFIRMDELETEPROJECT)).strip().lower()
+        
+        if reply in ['s', 'y']:
+        
+          try:  
+        
+            # delete project folder
+            
+            shutil.rmtree(newpath)
+            print(getTranslation(MSG.DONE))
+            
+          except PermissionError:
+              
+            print("----------------------------------------")
+            print(getTranslation(MSG.NOGRATSTODELETEFOLDER))
+          
+      else:
+        print(getTranslation(MSG.INVALIDPROJECTNAME))
+        
+    else:
+      print(getTranslation(MSG.PROJECTFOLDERNOTFOUND))
+            
 # Purpose: Build a project (transpiler action)
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
