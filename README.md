@@ -10,24 +10,24 @@ Awtly is an ongoing project still in a very preliminary version, the goal is cre
 
 The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
 
-# Updates for the latest version (0.1.5):
+# 🚀Updates for the latest version (0.1.5):
 
 The "delete" command has been implemented to delete a project folder. Use with caution.
 
-# License:
+# 📋License:
 
 Awtly is released under GPL-3 license, but is provided "as is". The compiler may contain bugs that could generate incorrect source code, corrupted output files, or unexpected behavior. The author is not responsible for accidental deletion of files or information profiles; we will be regularly updating the project to correct errors and thereby minimize the possibility of data loss.
 
 Always keep backups of your projects and important information.
 
-# Building and how to use
+# ⚙️Building and how to use
 
 Requirements: Python 3 or superior
 
-<b>Setup on Windows</b><br>
+🪟<b>Setup on Windows</b><br>
 Download and install from https://www.python.org/downloads/ the desired version (Awtly is fully functional in version 3.14).
 
-<b>Setup on Linux (Lubuntu version)</b><br>
+🐧<b>Setup on Linux (Lubuntu version)</b><br>
 Open your command console and type <i>"sudo apt update && sudo apt install -y python3 python3-pip python3-venv"</i>, then press ENTER key and put administrator password. Enter it and wait for Python to finish installing.
 
 If you have Synaptic installed, open it, search for "python3" and mark all the dependencies that appear, including the "python3-pip" and "python3-venv" packages if you need the package manager and virtual environments. Install everything and wait for Synaptic to complete the process.
