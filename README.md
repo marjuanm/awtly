@@ -32,7 +32,7 @@ Open your command console and type <i>"sudo apt update && sudo apt install -y py
 
 If you have Synaptic installed, open it, search for "python3" and mark all the dependencies that appear, including the "python3-pip" and "python3-venv" packages if you need the package manager and virtual environments. Install everything and wait for Synaptic to complete the process.
 
-With Python setup already open console / Command window, navigate to the Awtly folder, and run the command "python awtly.py" (Windows) or "python3 awtly.py" (Linux). If we don't specify any parameter, we will get the following message: "Invalid number of parameters." Possible parameters (this may change in the future):
+With Python setup already open console / Command window, navigate to the Awtly folder and run the command "python awtly.py" (Windows) or "python3 awtly.py" (Linux). If we don't specify any parameter, we will get the following message: "Invalid number of parameters." Possible parameters (this may change in the future):
 
 * python awtly.py new projectname<br>
 Create a new Awtly project in the current folder or another.
