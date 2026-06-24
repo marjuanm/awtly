@@ -26,17 +26,17 @@ Requirements: Python or superior, download from https://www.python.org/downloads
 
 If we don't specify any parameter, we will get the following message: "Invalid number of parameters." Possible parameters (this may change in the future):
 
-* python awtly.py new projectname
+* python awtly.py new projectname<br>
 Create a new Awtly project in the current folder or another.
 
-* python awtly.py delete projectname
+* python awtly.py delete projectname<br>
 Delete an Awtly project in the current folder or another. Use with caution.
 
-* python awtly.py build projectname
+* python awtly.py build projectname<br>
 It will convert an Awtly project in the current folder or anothers to its PHP equivalent, allowing with a simple language to create websites and applications without getting into many complications of some PHP frameworks. For now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
 
-* python awtly.py help ("/?" and "-h" are possible variations)
+* python awtly.py help ("/?" and "-h" are possible variations)<br>
 This will display specific help if you type the name of a command after the command "help" or "-h" (for example, "awtly help new" or "awtly -h new"). If you only type "help", "/?", or just "-h", it will display general help for all commands supported by Awtly.
 
-* python awtly.py -v
+* python awtly.py -v<br>
 This will display information about the current version of the Awtly IDE.
