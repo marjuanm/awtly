@@ -14,13 +14,13 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 
 The "delete" command has been implemented to delete a project folder. Use with caution.
 
-# 📋License:
+# 📋 License:
 
 Awtly is released under GPL-3 license, but is provided "as is". The compiler may contain bugs that could generate incorrect source code, corrupted output files, or unexpected behavior. The author is not responsible for accidental deletion of files or information profiles; we will be regularly updating the project to correct errors and thereby minimize the possibility of data loss.
 
 Always keep backups of your projects and important information.
 
-# 📋 Prerequisites
+# 💻 Prerequisites
 
 | Enviroment / Software | Minimum Requirement | Configuration Notes |
 | :--- | :---: | :--- |
@@ -28,7 +28,7 @@ Always keep backups of your projects and important information.
 | **Operating System** | Windows / Linux | Fully functional on both platforms. |
 | **Environment Variables** | `python` / `py` | Must be mapped in the system PATH. |
 
-# ⚙️Installation & Setup
+# ⚙️ Installation & Setup
 
 If you don't yet have Python installed, follow the instructions below to install it.
 
