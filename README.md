@@ -30,7 +30,7 @@ Always keep backups of your projects and important information.
 
 # ⚙️Installation & Setup
 
-If you do not yet have Python installed, follow the instructions below to install it.
+If you don't yet have Python installed, follow the instructions below to install it.
 
 🪟<b>Setup on Windows</b><br>
 Download and install from <a href="https://www.python.org/downloads/" target="_blank">Python official downloads page</a> the desired version.
