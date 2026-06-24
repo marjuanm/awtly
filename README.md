@@ -5,7 +5,7 @@
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
 
-# Whats is Awtly?
+# What is Awtly?
 Awtly is an ongoing project still in a very preliminary version, the goal is create a programming language that is very easy to learn, inspired by <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a>, <a href="https://en.wikipedia.org/wiki/Lua" target="_blank">Lua</a>, and others, which will allow creating PHP projects from simple to complex with instructions and methodologies that are easy to understand.
 
 The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
@@ -20,27 +20,37 @@ Awtly is released under GPL-3 license, but is provided "as is". The compiler may
 
 Always keep backups of your projects and important information.
 
-# ⚙️Building and how to use
+# 📋 Prerequisites
 
-Requirements: Python 3 or superior
+| Enviroment / Software | Minimum Requirement | Configuration Notes |
+| :--- | :---: | :--- |
+| **Python** | `3.14+` | Required for the compiler engine. |
+| **Operating System** | Windows / Linux | Fully functional on both platforms. |
+| **Environment Variables** | `python` / `py` | Must be mapped in the system PATH. |
+
+# ⚙️Installation & Setup
+
+If you do not yet have Python installed, follow the instructions below to install it.
 
 🪟<b>Setup on Windows</b><br>
-Download and install from https://www.python.org/downloads/ the desired version (Awtly is fully functional in version 3.14).
+Download and install from <a href="https://www.python.org/downloads/" target="_blank">Python official downloads page</a> the desired version.
 
 🐧<b>Setup on Linux (Lubuntu version)</b><br>
 Open your command console and type <i>"sudo apt update && sudo apt install -y python3 python3-pip python3-venv"</i>, then press ENTER key and put administrator password. Enter it and wait for Python to finish installing.
 
 If you have Synaptic installed, open it, search for "python3" and mark all the dependencies that appear, including the "python3-pip" and "python3-venv" packages if you need the package manager and virtual environments. Install everything and wait for Synaptic to complete the process.
 
-With Python setup already open console / Command window, navigate to the Awtly folder and run the command "python awtly.py" (Windows) or "python3 awtly.py" (Linux). If we don't specify any parameter, we will get the following message: "Invalid number of parameters." Possible parameters (this may change in the future):
+# 🛠️ Usage (Command Line Interface)
 
-* python awtly.py new projectname<br>
+Open your console / command window, navigate to the Awtly folder and run the command `python awtly.py` (Windows) or `python3 awtly.py` (Linux). If we don't specify any parameter, we will get the following message: "Invalid number of parameters." Possible parameters (this may change in the future):
+
+* `python awtly.py new projectname`<br>
 Create a new Awtly project in the current folder or another.
 
-* python awtly.py delete projectname<br>
+* `python awtly.py delete projectname`<br>
 Delete an Awtly project in the current folder or another. Use with caution.
 
-* python awtly.py build projectname<br>
+* `python awtly.py build projectname`<br>
 It will convert an Awtly project in the current folder or anothers to its PHP equivalent, allowing with a simple language to create websites and applications without getting into many complications of some PHP frameworks. For now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
 
 * python awtly.py help ("/?" and "-h" are possible variations)<br>
