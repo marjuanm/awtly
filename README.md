@@ -32,10 +32,10 @@ Always keep backups of your projects and important information.
 
 If you don't yet have Python installed, follow the instructions below to install it.
 
-<b>Setup on Windows</b><br>
+<b>Windows:</b><br>
 Download and install from <a href="https://www.python.org/downloads/" target="_blank">Python official downloads page</a> the desired version.
 
-<b>Setup on Linux (Lubuntu version)</b><br>
+<b>Linux (Lubuntu version):</b><br>
 Open your command console and type `"sudo apt update && sudo apt install -y python3 python3-pip python3-venv"`, then press ENTER key and put administrator password. Enter it and wait for Python to finish installing.
 
 If you have Synaptic installed, open it, search for "python3" and mark all the dependencies that appear, including the "python3-pip" and "python3-venv" packages if you need the package manager and virtual environments. Install everything and wait for Synaptic to complete the process.
