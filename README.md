@@ -36,7 +36,7 @@ If you do not yet have Python installed, follow the instructions below to instal
 Download and install from <a href="https://www.python.org/downloads/" target="_blank">Python official downloads page</a> the desired version.
 
 🐧<b>Setup on Linux (Lubuntu version)</b><br>
-Open your command console and type <i>"sudo apt update && sudo apt install -y python3 python3-pip python3-venv"</i>, then press ENTER key and put administrator password. Enter it and wait for Python to finish installing.
+Open your command console and type `"sudo apt update && sudo apt install -y python3 python3-pip python3-venv"`, then press ENTER key and put administrator password. Enter it and wait for Python to finish installing.
 
 If you have Synaptic installed, open it, search for "python3" and mark all the dependencies that appear, including the "python3-pip" and "python3-venv" packages if you need the package manager and virtual environments. Install everything and wait for Synaptic to complete the process.
 
@@ -53,8 +53,8 @@ Delete an Awtly project in the current folder or another. Use with caution.
 * `python awtly.py build projectname`<br>
 It will convert an Awtly project in the current folder or anothers to its PHP equivalent, allowing with a simple language to create websites and applications without getting into many complications of some PHP frameworks. For now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
 
-* python awtly.py help ("/?" and "-h" are possible variations)<br>
+* `python awtly.py help` ("/?" and "-h" are possible variations)<br>
 This will display specific help if you type the name of a command after the command "help" or "-h" (for example, "awtly help new" or "awtly -h new"). If you only type "help", "/?", or just "-h", it will display general help for all commands supported by Awtly.
 
-* python awtly.py -v<br>
+* `python awtly.py` -v<br>
 This will display information about the current version of the Awtly IDE.
