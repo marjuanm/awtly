@@ -26,7 +26,7 @@ Always keep backups of your projects and important information.
 | :--- | :---: | :--- |
 | **Python** | `3.14+` | Required for the compiler engine. |
 | **Operating System** | Windows / Linux | Fully functional on both platforms. |
-| **Environment Variables** | `python` / `py` | Must be mapped in the system PATH. |
+| **Environment Variables** | `python` / `pyhon3` / `py` | Must be mapped in the system PATH. |
 
 # ⚙️ Installation & Setup
 
