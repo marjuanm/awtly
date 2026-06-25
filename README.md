@@ -10,7 +10,7 @@ Awtly is an ongoing project still in a very preliminary version, the goal is cre
 
 The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
 
-# 🚀Updates for the latest version (0.1.5):
+# 🚀 Updates for the latest version (0.1.5):
 
 The "delete" command has been implemented to delete a project folder. Use with caution.
 
