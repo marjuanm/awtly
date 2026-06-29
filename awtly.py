@@ -7,12 +7,17 @@ import sys
 
 from messages import MSG
 from translations import getTranslation
-from commands import newProject, deleteProject, buildProject, help, version
+from commands import newProject, addPage, deleteProject, buildProject, help, version
    
 # sys.argv[0] program name ("awtly.py")
 # sys.argv[1] first parameter ("new/delete/build/help")
 # sys.argv[2] second parameter (project name)
 
+# Purpose: Main function
+# Created date: 08/06/2026
+# Created by username: Juan Manuel Mar Hdz.
+# Last modified date: 29/06/2026
+# Last modified username: Juan Manuel Mar Hdz.
 if len(sys.argv) <= 2:
     
   if len(sys.argv) <= 1:
@@ -30,7 +35,7 @@ if len(sys.argv) <= 2:
       version()        
     else:
         
-      if cmd.lower() == "new" or cmd.lower() == "delete" or cmd.lower() == "build":
+      if cmd.lower() == "new" or cmd.lower() == "addpage" or cmd.lower() == "delete" or cmd.lower() == "build":
         msg = getTranslation(MSG.INCOMPLETECOMMAND)
       else:
         msg = getTranslation(MSG.UNKNOWNCOMMAND)
@@ -41,9 +46,16 @@ else:
     
   cmd = sys.argv[1]
   projname = sys.argv[2]
-  
+
   if cmd.lower() == "new":
     newProject(projname)
+  elif cmd.lower() == "addpage":
+      
+    if len(sys.argv) <= 3:
+      print(getTranslation(MSG.INCOMPLETECOMMAND))
+    else:
+      addPage(projname, sys.argv[3])
+      
   elif cmd.lower() == "delete":
     deleteProject(projname)    
   elif cmd.lower() == "build":

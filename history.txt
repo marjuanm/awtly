@@ -1,8 +1,16 @@
+0.1.6
+
+- Implemented the "addpage" command, this allows adding new pages to the project by creating the necessary files to start working.
+
+- Updated project help to include documentation for the "addpage" command.
+
 0.1.5
 
 - Successfully tested on Linux: the "new" command can create folders with full paths to other folders; a header indicating the project name, license, and basic file details has been added to all .py files.
 
 - Implemented the "delete" command, which can remove a project folder—either from the location of the main Awtly script or from a specified path. Use with caution.
+
+- Corrections to source code.
 
 
 0.1.4

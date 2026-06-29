@@ -3,6 +3,7 @@
 # Copyright (C) 2026 Juan Manuel Mar Hdz.
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
+import os
 import shutil
 import locale
 
@@ -122,6 +123,110 @@ def newProject(projname):
       
       print("----------------------------------------")
       print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+      
+# Purpose: Add a new page to project structure
+# Created date: 29/06/2026
+# Created by username: Juan Manuel Mar Hdz.
+# Last modified date: 29/06/2026
+# Last modified username: Juan Manuel Mar Hdz.
+def addPage(projname, page):
+    
+  path = getPath()
+  updateproject = True  
+  projname_clean = projname.strip()
+  
+  # use the correct path
+  if "\\" in projname_clean or "/" in projname_clean:
+    newpath = Path(projname_clean)
+  else:  
+    newpath = Path(path.strip() + "/" + projname_clean.strip())
+    
+  if newpath.suffix.strip() != "":
+        
+    updateproject = False
+    print(getTranslation(MSG.INVALIDPROJECTNAME))
+        
+  else:
+        
+    if not newpath.exists():
+    
+      updateproject = False
+      print(getTranslation(MSG.FOLDERPROJECTNAMENOTFOUND))
+      
+    else:
+        
+      filename, filext = os.path.splitext(page.strip())
+      
+      if filext != "":
+          
+        print(getTranslation(MSG.INVALIDPAGENAME))
+        updateproject = False
+
+      else:
+          
+        base = Path(newpath)
+        file = page.strip()
+        
+        awsc = base / "logic" / f"{file}.awsc"
+        awcp = base / "pages" / f"{file}.awcp"
+        awui = base / "pages" / f"{file}.awui"
+        
+        if awsc.exists() or awcp.exists() or awui.exists():
+          reply = input(getTranslation(MSG.CONFIRMOVERWRITEPAGE)).strip().lower()
+        else:
+          reply = "y"
+          
+        if reply in ['s', 'y']:
+        
+          # delete new page files first
+          
+          try:  
+              
+            if awsc.exists():
+              awsc.unlink()
+              
+            if awcp.exists():
+              awcp.unlink()
+              
+            if awui.exists():
+              awui.unlink()
+          
+          except PermissionError:
+              
+            print("----------------------------------------")
+            print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+            updateproject = False
+            
+        else:  
+          updateproject = False
+        
+  if updateproject ==  True:
+    
+    try:
+          
+      #add page basic files to current project
+        
+      print("----------------------------------------")
+      print(getTranslation(MSG.CREATINGPAGEFILES))
+
+      file_ui = base / "pages" / f"{page.strip()}.awui"
+      file_ui.parent.mkdir(parents=True, exist_ok=True)
+      file_ui.write_text(NEWPROJECT.DOCUMENT, encoding="utf-8")
+  
+      file_cp = base / "pages" / f"{page.strip()}.awcp"
+      file_cp.parent.mkdir(parents=True, exist_ok=True)
+      file_cp.write_text("/* TO DO: Add control properties here */\n\n", encoding="utf-8")
+      
+      file_sc = base / "logic" / f"{page.strip()}.awsc"
+      file_sc.parent.mkdir(parents=True, exist_ok=True)
+      file_sc.write_text("/* TO DO: Add logic and events here */\n\n", encoding="utf-8")
+      
+      print(getTranslation(MSG.DONE))
+        
+    except PermissionError:
+      
+      print("----------------------------------------")
+      print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
             
 # Purpose: Delete a project
 # Created date: 08/06/2026
@@ -188,7 +293,7 @@ def version():
 # Purpose: Show help
 # Created date: 10/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 10/06/2026
+# Last modified date: 29/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def help(cmd):
     
@@ -200,6 +305,7 @@ def help(cmd):
     
       str = PROJECT_SHORT_NAME + " reconoce los siguientes comandos:\n\n"
       str = str + "new (nombre del proyecto):\n" + getTranslation(MSG.NEWCOMMAND) + "\n\n"
+      str = str + "addpage (nombre del proyecto) (nombre de la pagina):\n" + getTranslation(MSG.ADDPAGECOMMAND) + "\n\n"
       str = str + "delete (nombre del proyecto):\n" + getTranslation(MSG.DELETECOMMAND) + "\n\n"
       str = str + "build (nombre del proyecto):\n" + getTranslation(MSG.BUILDCOMMAND) + "\n\n"
       str = str + "-v: " + getTranslation(MSG.VERSION)
@@ -208,6 +314,7 @@ def help(cmd):
         
       str = PROJECT_SHORT_NAME + " recognizes the following commands:\n\n"
       str = str + "new (project name):\n" + getTranslation(MSG.NEWCOMMAND) + "\n\n"
+      str = str + "addpage (project name) (page name):\n" + getTranslation(MSG.ADDPAGECOMMAND) + "\n\n"
       str = str + "delete (project name):\n" + getTranslation(MSG.DELETECOMMAND) + "\n\n"
       str = str + "build (project name):\n" + getTranslation(MSG.BUILDCOMMAND) + "\n\n"
       str = str + "-v: " + getTranslation(MSG.VERSION)
@@ -215,12 +322,17 @@ def help(cmd):
     print(str)
   
   else:
-      
+
     if cmd.lower() == "new":
         
       msg = getTranslation(MSG.NEWCOMMAND)
       print(msg)  
+    
+    elif cmd.lower() == "addpage":
       
+      msg = getTranslation(MSG.ADDPAGECOMMAND)
+      print(msg)  
+        
     elif cmd.lower() == "delete":
       
       msg = getTranslation(MSG.DELETECOMMAND)

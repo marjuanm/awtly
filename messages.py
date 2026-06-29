@@ -6,7 +6,7 @@
 # Purpose: Messages structure
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 24/06/2026
+# Last modified date: 29/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 class MSG:
   INVALIDPARAMSNUMBER = 1
@@ -25,3 +25,8 @@ class MSG:
   DONE = 14
   CONFIRMDELETEPROJECT = 15
   PROJECTFOLDERNOTFOUND = 16
+  FOLDERPROJECTNAMENOTFOUND = 17
+  CONFIRMOVERWRITEPAGE = 18
+  CREATINGPAGEFILES = 19
+  ADDPAGECOMMAND = 20
+  INVALIDPAGENAME = 21

@@ -11,7 +11,7 @@ from constants import PROJECT_SHORT_NAME
 # Purpose: Get translation
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 24/06/2026
+# Last modified date: 29/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 # Thanks to gemini
 def getTranslation(msgid):
@@ -33,7 +33,7 @@ def getTranslation(msgid):
     elif msgid == MSG.VERSION:
       return "Muestra la versión actual de " + PROJECT_SHORT_NAME + "."
     elif msgid == MSG.INCOMPLETECOMMAND:
-      return "Comando incompleto, escriba '" + PROJECT_SHORT_NAME + " help' para mostrar ayuda."
+      return "Comando incompleto, invoque el proyecto '" + PROJECT_SHORT_NAME + "' y luego el comando 'help' para mostrar ayuda."
     elif msgid == MSG.PATHNOTFOLDERRUNCOMMAND:
       return "La ruta ingresada no es una carpeta y no puede ser usada para ejecutar el comando actual, se usará la ruta actual en su lugar."
     elif msgid == MSG.CONFIRMOVERWRITEPROJECT:
@@ -50,6 +50,16 @@ def getTranslation(msgid):
       return "Borrar el proyecto\n¿Desea continuar? (s/n): "
     elif msgid == MSG.PROJECTFOLDERNOTFOUND:
       return "Proyecto no encontrado"
+    elif msgid == MSG.FOLDERPROJECTNAMENOTFOUND:
+      return "Proyecto no encontrado"
+    elif msgid == MSG.CONFIRMOVERWRITEPAGE:
+      return "Algunos archivos ya existen, se sobreescribirán\n¿Desea continuar? (s/n): "
+    elif msgid == MSG.CREATINGPAGEFILES:
+      return "Creando documentos adicionales"
+    elif msgid == MSG.ADDPAGECOMMAND:
+      return "Agrega los archivos necesarios para crear una nueva página en el proyecto especificado"
+    elif msgid == MSG.INVALIDPAGENAME:
+      return "El nombre de la página a agregar al proyecto no debe contener extensiones de archivos."
     else:
       return "ID de traducción inválido"
       
@@ -68,7 +78,7 @@ def getTranslation(msgid):
     elif msgid == MSG.VERSION:
       return "Show " + PROJECT_SHORT_NAME + "'s current version."
     elif msgid == MSG.INCOMPLETECOMMAND:
-      return "Incomplete command, type '" + PROJECT_SHORT_NAME + " help' to show help."
+      return "Incomplete command, invoke the project '" + PROJECT_SHORT_NAME + "' and then the 'help' command to display help."
     elif msgid == MSG.PATHNOTFOLDERRUNCOMMAND:
       return "The path entered is not a folder and cannot be used to execute the current command, the current path will be used instead."
     elif msgid == MSG.CONFIRMOVERWRITEPROJECT:
@@ -85,5 +95,15 @@ def getTranslation(msgid):
       return "Delete the project\nDo you want continue? (y/n): "
     elif msgid == MSG.PROJECTFOLDERNOTFOUND:
       return "Project not found"
+    elif msgid == MSG.FOLDERPROJECTNAMENOTFOUND:
+      return "Project not found"
+    elif msgid == MSG.CONFIRMOVERWRITEPAGE:
+      return "Some files already exist, they will be overwritten\nDo you want continue? (y/n): "
+    elif msgid == MSG.CREATINGPAGEFILES:
+      return "Creating additional documents"
+    elif msgid == MSG.ADDPAGECOMMAND:
+      return "Adds the files needed to create a new page in the specified project"
+    elif msgid == MSG.INVALIDPAGENAME:
+      return "The name of the page to be added to the project must not contain file extensions."
     else:
       return "Invalid ID translator"
