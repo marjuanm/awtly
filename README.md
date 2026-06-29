@@ -55,6 +55,9 @@ Open your console / command window, navigate to the Awtly folder and run the com
 * `python awtly.py new projectname`<br>
 Create a new Awtly project in the current folder or another.
 
+* `python awtly.py addpage projectname pagetoadd`<br>
+Add a new page structure to the project folder.
+
 * `python awtly.py delete projectname`<br>
 Delete an Awtly project in the current folder or another. Use with caution.
 
