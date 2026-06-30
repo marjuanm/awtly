@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png?v=2" width="auto" height="331" alt="Awtly's pet"><br>
-    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=5" height="20" alt="Release version"></a>
+    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=6" height="20" alt="Release version"></a>
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
@@ -18,9 +18,11 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 - [ ] 🔄 Native PHP code generator
 - [ ] 📦 Support for external libraries and other add-ons.
 
-# 🚀 Updates for the latest version (0.1.5):
+# 🚀 Updates for the latest version (0.2.0):
 
-Implemented the "addpage" command; this allows adding new pages to the project by creating the necessary files to start working.
+Awtly now supports translation files for its operation (specifically, .py files located in the project's `lang` folder). Previously, everything was loaded from a data structure using an ID to retrieve the correct element.
+
+While that approach worked, it lacked future flexibility; with the new scheme, one simply clones the structure from one translation file to another, adapts the messages, makes a few minor adjustments to the translation function, and it's ready to go.
 
 # 📋 License:
 
