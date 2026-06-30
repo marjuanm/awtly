@@ -1,6 +1,6 @@
 # Awtly - php transpiller util
 # Original file name: commands.py
-# Copyright (C) 2026 Juan Manuel Mar Hdz.
+# Copyright (c) 2026 Juan Manuel Mar Hdz.
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
 import os
@@ -8,7 +8,6 @@ import shutil
 import locale
 
 from pathlib import Path
-from messages import MSG
 from gmodule import getPath
 from translations import getTranslation
 from structures import NEWPROJECT
@@ -17,24 +16,22 @@ from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT
 # Purpose: Create a new project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 24/06/2026
+# Last modified date: 30/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def newProject(projname):
     
   path = getPath()
   createproject = True  
   projname_clean = projname.strip()
+  candidate = Path(projname_clean)
   
   # use the correct path
-  if "\\" in projname_clean or "/" in projname_clean:
-    newpath = Path(projname_clean)
-  else:  
-    newpath = Path(path.strip() + "/" + projname_clean.strip())
+  newpath = candidate if candidate.is_absolute() else path / candidate  
     
   if newpath.suffix.strip() != "":
         
     createproject = False
-    print(getTranslation(MSG.INVALIDPROJECTNAME))
+    print(getTranslation("INVALIDPROJECTNAME"))
         
   else:
         
@@ -42,7 +39,7 @@ def newProject(projname):
     
       if newpath.is_dir():
         
-        reply = input(getTranslation(MSG.CONFIRMOVERWRITEPROJECT)).strip().lower()
+        reply = input(getTranslation("CONFIRMOVERWRITEPROJECT")).strip().lower()
         
         if reply in ['s', 'y']:
         
@@ -53,7 +50,7 @@ def newProject(projname):
           except PermissionError:
               
             print("----------------------------------------")
-            print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+            print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
             createproject = False
             
         else:  
@@ -61,7 +58,7 @@ def newProject(projname):
           
       else:
         
-        print(getTranslation(MSG.INVALIDPROJECTNAME))
+        print(getTranslation("INVALIDPROJECTNAME"))
         createproject = False
         
   if createproject ==  True:
@@ -73,7 +70,7 @@ def newProject(projname):
       #create basic files to current project
         
       print("----------------------------------------")
-      print(getTranslation(MSG.CREATINGPROJECTFILES))
+      print(getTranslation("CREATINGPROJECTFILES"))
 
       folder = newpath / "templates" #User templates folder
       folder.mkdir(parents=True, exist_ok=True)
@@ -117,41 +114,39 @@ def newProject(projname):
       file = newpath / "assets/css/styles.css" #Project styles
       file.write_text(NEWPROJECT.STYLES, encoding="utf-8")
         
-      print(getTranslation(MSG.DONE))
+      print(getTranslation("DONE"))
         
     except PermissionError:
       
       print("----------------------------------------")
-      print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+      print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
       
 # Purpose: Add a new page to project structure
 # Created date: 29/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 29/06/2026
+# Last modified date: 30/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def addPage(projname, page):
     
   path = getPath()
   updateproject = True  
   projname_clean = projname.strip()
+  candidate = Path(projname_clean)
   
   # use the correct path
-  if "\\" in projname_clean or "/" in projname_clean:
-    newpath = Path(projname_clean)
-  else:  
-    newpath = Path(path.strip() + "/" + projname_clean.strip())
+  newpath = candidate if candidate.is_absolute() else path / candidate  
     
   if newpath.suffix.strip() != "":
         
     updateproject = False
-    print(getTranslation(MSG.INVALIDPROJECTNAME))
+    print(getTranslation("INVALIDPROJECTNAME"))
         
   else:
         
     if not newpath.exists():
     
       updateproject = False
-      print(getTranslation(MSG.FOLDERPROJECTNAMENOTFOUND))
+      print(getTranslation("FOLDERPROJECTNAMENOTFOUND"))
       
     else:
         
@@ -159,7 +154,7 @@ def addPage(projname, page):
       
       if filext != "":
           
-        print(getTranslation(MSG.INVALIDPAGENAME))
+        print(getTranslation("INVALIDPAGENAME"))
         updateproject = False
 
       else:
@@ -172,7 +167,7 @@ def addPage(projname, page):
         awui = base / "pages" / f"{file}.awui"
         
         if awsc.exists() or awcp.exists() or awui.exists():
-          reply = input(getTranslation(MSG.CONFIRMOVERWRITEPAGE)).strip().lower()
+          reply = input(getTranslation("CONFIRMOVERWRITEPAGE")).strip().lower()
         else:
           reply = "y"
           
@@ -194,7 +189,7 @@ def addPage(projname, page):
           except PermissionError:
               
             print("----------------------------------------")
-            print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+            print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
             updateproject = False
             
         else:  
@@ -207,7 +202,7 @@ def addPage(projname, page):
       #add page basic files to current project
         
       print("----------------------------------------")
-      print(getTranslation(MSG.CREATINGPAGEFILES))
+      print(getTranslation("CREATINGPAGEFILES"))
 
       file_ui = base / "pages" / f"{page.strip()}.awui"
       file_ui.parent.mkdir(parents=True, exist_ok=True)
@@ -221,38 +216,36 @@ def addPage(projname, page):
       file_sc.parent.mkdir(parents=True, exist_ok=True)
       file_sc.write_text("/* TO DO: Add logic and events here */\n\n", encoding="utf-8")
       
-      print(getTranslation(MSG.DONE))
+      print(getTranslation("DONE"))
         
     except PermissionError:
       
       print("----------------------------------------")
-      print(getTranslation(MSG.NOGRATSTOOVERWRITEORDELETEFOLDER))
+      print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
             
 # Purpose: Delete a project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 24/06/2026
+# Last modified date: 30/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def deleteProject(projname):
     
   path = getPath()
   projname_clean = projname.strip()
+  candidate = Path(projname_clean)
   
   # use the correct path
-  if "\\" in projname_clean or "/" in projname_clean:
-    newpath = Path(projname_clean)
-  else:  
-    newpath = Path(path.strip() + "/" + projname_clean.strip())
-    
+  newpath = candidate if candidate.is_absolute() else path / candidate  
+  
   if newpath.suffix.strip() != "":
-    print(getTranslation(MSG.INVALIDPROJECTNAME))      
+    print(getTranslation("INVALIDPROJECTNAME"))      
   else:
         
     if newpath.exists():
     
       if newpath.is_dir():
         
-        reply = input(getTranslation(MSG.CONFIRMDELETEPROJECT)).strip().lower()
+        reply = input(getTranslation("CONFIRMDELETEPROJECT")).strip().lower()
         
         if reply in ['s', 'y']:
         
@@ -261,18 +254,18 @@ def deleteProject(projname):
             # delete project folder
             
             shutil.rmtree(newpath)
-            print(getTranslation(MSG.DONE))
+            print(getTranslation("DONE"))
             
           except PermissionError:
               
             print("----------------------------------------")
-            print(getTranslation(MSG.NOGRATSTODELETEFOLDER))
+            print(getTranslation("NOGRATSTODELETEFOLDER"))
           
       else:
-        print(getTranslation(MSG.INVALIDPROJECTNAME))
+        print(getTranslation("INVALIDPROJECTNAME"))
         
     else:
-      print(getTranslation(MSG.PROJECTFOLDERNOTFOUND))
+      print(getTranslation("PROJECTFOLDERNOTFOUND"))
             
 # Purpose: Build a project (transpiler action)
 # Created date: 08/06/2026
@@ -285,15 +278,15 @@ def buildProject(projname):
 # Purpose: Show version
 # Created date: 10/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 10/06/2026
+# Last modified date: 30/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def version():
-  print(PROJECT_NAME + " version " + PROJECT_VERSION + "\n(C)" + PROJECT_YEAR + " " + TEAM_NAME)
+  print(PROJECT_NAME + " version " + PROJECT_VERSION + "\n(c) " + PROJECT_YEAR + " " + TEAM_NAME)
   
 # Purpose: Show help
 # Created date: 10/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 29/06/2026
+# Last modified date: 30/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def help(cmd):
     
@@ -304,46 +297,36 @@ def help(cmd):
     if lang and (lang.lower().startswith("es") or lang.lower().startswith("spanish")):
     
       str = PROJECT_SHORT_NAME + " reconoce los siguientes comandos:\n\n"
-      str = str + "new (nombre del proyecto):\n" + getTranslation(MSG.NEWCOMMAND) + "\n\n"
-      str = str + "addpage (nombre del proyecto) (nombre de la pagina):\n" + getTranslation(MSG.ADDPAGECOMMAND) + "\n\n"
-      str = str + "delete (nombre del proyecto):\n" + getTranslation(MSG.DELETECOMMAND) + "\n\n"
-      str = str + "build (nombre del proyecto):\n" + getTranslation(MSG.BUILDCOMMAND) + "\n\n"
-      str = str + "-v: " + getTranslation(MSG.VERSION)
+      str = str + "new (nombre del proyecto):\n" + getTranslation("NEWCOMMAND") + "\n\n"
+      str = str + "addpage (nombre del proyecto) (nombre de la pagina):\n" + getTranslation("ADDPAGECOMMAND") + "\n\n"
+      str = str + "delete (nombre del proyecto):\n" + getTranslation("DELETECOMMAND") + "\n\n"
+      str = str + "build (nombre del proyecto):\n" + getTranslation("BUILDCOMMAND") + "\n\n"
+      str = str + "-v: " + getTranslation("VERSION")
     
     else:
         
       str = PROJECT_SHORT_NAME + " recognizes the following commands:\n\n"
-      str = str + "new (project name):\n" + getTranslation(MSG.NEWCOMMAND) + "\n\n"
-      str = str + "addpage (project name) (page name):\n" + getTranslation(MSG.ADDPAGECOMMAND) + "\n\n"
-      str = str + "delete (project name):\n" + getTranslation(MSG.DELETECOMMAND) + "\n\n"
-      str = str + "build (project name):\n" + getTranslation(MSG.BUILDCOMMAND) + "\n\n"
-      str = str + "-v: " + getTranslation(MSG.VERSION)
+      str = str + "new (project name):\n" + getTranslation("NEWCOMMAND") + "\n\n"
+      str = str + "addpage (project name) (page name):\n" + getTranslation("ADDPAGECOMMAND") + "\n\n"
+      str = str + "delete (project name):\n" + getTranslation("DELETECOMMAND") + "\n\n"
+      str = str + "build (project name):\n" + getTranslation("BUILDCOMMAND") + "\n\n"
+      str = str + "-v: " + getTranslation("VERSION")
         
     print(str)
   
   else:
 
     if cmd.lower() == "new":
-        
-      msg = getTranslation(MSG.NEWCOMMAND)
-      print(msg)  
+      print(getTranslation("NEWCOMMAND"))
     
     elif cmd.lower() == "addpage":
-      
-      msg = getTranslation(MSG.ADDPAGECOMMAND)
-      print(msg)  
+      print(getTranslation("ADDPAGECOMMAND"))
         
     elif cmd.lower() == "delete":
-      
-      msg = getTranslation(MSG.DELETECOMMAND)
-      print(msg)  
+      print(getTranslation("DELETECOMMAND"))
       
     elif cmd.lower() == "build":
-        
-      msg = getTranslation(MSG.BUILDCOMMAND)
-      print(msg)  
+      print(getTranslation("BUILDCOMMAND"))
       
     else:
-    
-      msg = getTranslation(MSG.UNKNOWNCOMMAND)
-      print(msg)
+      print(getTranslation("UNKNOWNCOMMAND"))

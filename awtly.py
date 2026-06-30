@@ -1,11 +1,11 @@
 # Awtly - php transpiller util
 # Original file name: awtly.py
-# Copyright (C) 2026 Juan Manuel Mar Hdz.
+# Copyright (c) 2026 Juan Manuel Mar Hdz.
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
 import sys
+import importlib
 
-from messages import MSG
 from translations import getTranslation
 from commands import newProject, addPage, deleteProject, buildProject, help, version
    
@@ -16,14 +16,12 @@ from commands import newProject, addPage, deleteProject, buildProject, help, ver
 # Purpose: Main function
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 29/06/2026
+# Last modified date: 30/06/2026
 # Last modified username: Juan Manuel Mar Hdz.
 if len(sys.argv) <= 2:
     
   if len(sys.argv) <= 1:
-
-    msg = getTranslation(MSG.INVALIDPARAMSNUMBER)
-    print(msg)
+    print(getTranslation("INVALIDPARAMSNUMBER"))
     
   else:
       
@@ -36,9 +34,9 @@ if len(sys.argv) <= 2:
     else:
         
       if cmd.lower() == "new" or cmd.lower() == "addpage" or cmd.lower() == "delete" or cmd.lower() == "build":
-        msg = getTranslation(MSG.INCOMPLETECOMMAND)
+        msg = getTranslation("INCOMPLETECOMMAND")
       else:
-        msg = getTranslation(MSG.UNKNOWNCOMMAND)
+        msg = getTranslation("UNKNOWNCOMMAND")
       
       print(msg)
   
@@ -52,7 +50,7 @@ else:
   elif cmd.lower() == "addpage":
       
     if len(sys.argv) <= 3:
-      print(getTranslation(MSG.INCOMPLETECOMMAND))
+      print(getTranslation("INCOMPLETECOMMAND"))
     else:
       addPage(projname, sys.argv[3])
       
@@ -68,7 +66,5 @@ else:
       help(projname.replace("'", ""))    
   
   else:
-    
-    msg = getTranslation(MSG.UNKNOWNCOMMAND)
-    print(msg)
+    print(getTranslation("UNKNOWNCOMMAND"))
   

@@ -1,7 +1,7 @@
 # Awtly - php transpiller util
 # Original file name: newprojectstructure.py
 # Current file name: structures.py
-# Copyright (C) 2026 Juan Manuel Mar Hdz.
+# Copyright (c) 2026 Juan Manuel Mar Hdz.
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
 # Purpose: New project structure
