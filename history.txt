@@ -1,3 +1,7 @@
+0.2.0
+
+- Awtly now supports translation files for its operation (specifically, .py files located in the project's `lang` folder). Previously, everything was loaded from a data structure using an ID to retrieve the correct element.
+
 0.1.6
 
 - Implemented the "addpage" command, this allows adding new pages to the project by creating the necessary files to start working.
