@@ -5,7 +5,7 @@
 
 from constants import PROJECT_SHORT_NAME
 
-# Generic english translation file
+# Generic English translation file
 MESSAGES = {
   "INVALIDPARAMSNUMBER":
     "Invalid number of parameters",

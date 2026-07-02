@@ -1,3 +1,11 @@
+0.2.1
+
+- Reorganized the source code by moving various files into separate folders, thereby improving project organization to maintain readability and ease of maintenance.
+
+- Created translation files for several languages: Arabic, German, French, Portuguese (variants for Portugal and Brazil), Russian, Turkish, and Simplified Chinese, in addition to the initial Spanish and English versions (noting that these two languages ​​also have specific variants for Mexico, Spain, the USA, and England, respectively).
+
+- Made various adjustments to ensure Awtly recognizes initial letters in different languages ​​as "yes/no" (y/n) equivalents—specifically the letters 's', 'y', 'j', 'o' and 'e'. However, since some languages ​​don't use standard text input, testing with Chinese characters was not possible; future testing might be conducted using virtual keyboards (if available) for these languages ​​to make any necessary adjustments.
+
 0.2.0
 
 - Awtly now supports translation files for its operation (specifically, .py files located in the project's `lang` folder). Previously, everything was loaded from a data structure using an ID to retrieve the correct element.

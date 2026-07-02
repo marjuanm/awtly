@@ -6,8 +6,8 @@
 import sys
 import importlib
 
-from translations import getTranslation
-from commands import newProject, addPage, deleteProject, buildProject, help, version
+from core.translations import getTranslation
+from core.commands import newProject, addPage, deleteProject, buildProject, help, version
    
 # sys.argv[0] program name ("awtly.py")
 # sys.argv[1] first parameter ("new/delete/build/help")

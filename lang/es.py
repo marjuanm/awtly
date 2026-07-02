@@ -5,7 +5,7 @@
 
 from constants import PROJECT_SHORT_NAME
 
-# Generic spanish translation file
+# Generic Spanish translation file
 MESSAGES = {
 	
   "INVALIDPARAMSNUMBER":

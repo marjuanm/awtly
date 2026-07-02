@@ -1,0 +1,52 @@
+# Awtly - php transpiller util
+# Original file name: ar.py
+# Copyright (c) 2026 Juan Manuel Mar Hdz.
+# Licensed under GPL-3.0, see the license file on the root project structure for more information.
+
+from constants import PROJECT_SHORT_NAME
+
+# Generic Arab translation file
+MESSAGES = {
+  "INVALIDPARAMSNUMBER":
+    "عدد المعلمات غير صالح",
+  "UNKNOWNCOMMAND":
+    "أمر غير معروف",
+  "NEWCOMMAND":
+    "ينشئ مشروعًا في المجلد الحالي أو المسار المحدد.",
+  "DELETECOMMAND":
+    "يحذف مشروعًا من المجلد الحالي أو المسار المحدد.",
+  "BUILDCOMMAND":
+    "يجمع مشروعًا إلى PHP في المجلد الحالي أو المسار المحدد.",
+  "VERSION":
+    "يعرض الإصدار الحالي لـ " + PROJECT_SHORT_NAME + ".",
+  "INCOMPLETECOMMAND":
+    "أمر غير مكتمل. قم بتشغيل المشروع '" + PROJECT_SHORT_NAME + "' متبوعًا بأمر 'help' لعرض المساعدة.",
+  "PATHNOTFOLDERRUNCOMMAND":
+    "المسار المحدد ليس مجلدًا ولا يمكن استخدامه لتنفيذ الأمر الحالي. سيتم استخدام المسار الحالي بدلاً من ذلك.",
+  "CONFIRMOVERWRITEPROJECT":
+    "المشروع موجود بالفعل.\nهل تريد الاستمرار؟ (y/n): ",
+  "INVALIDPROJECTNAME":
+    "يجب ألا يحتوي اسم مجلد المشروع على امتدادات ملفات.",
+  "FOLDERPROJECTNAME":
+    "مجلد المشروع",
+  "CREATINGPROJECTFILES":
+    "جاري إنشاء بنية المشروع",
+  "DONE":
+    "تم.", 
+  "CONFIRMDELETEPROJECT":
+    "حذف المشروع.\nهل تريد الاستمرار؟ (y/n): ",
+  "PROJECTFOLDERNOTFOUND":
+    "المشروع غير موجود",
+  "FOLDERPROJECTNAMENOTFOUND":
+    "المشروع غير موجود",
+  "CONFIRMOVERWRITEPAGE":
+    "بعض الملفات موجودة بالفعل وسيتم استبدالها.\nهل تريد الاستمرار؟ (y/n): ",
+  "CREATINGPAGEFILES":
+    "جاري إنشاء ملفات إضافية",
+  "ADDPAGECOMMAND":
+    "يضيف الملفات المطلوبة لإنشاء صفحة جديدة في المشروع المحدد",
+  "INVALIDPAGENAME":
+    "يجب ألا يحتوي اسم الصفحة المراد إضافتها إلى المشروع على امتدادات ملفات.",
+  "INVALIDID":
+    "معرف ترجمة غير صالح"
+}
