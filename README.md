@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png?v=2" width="auto" height="331" alt="Awtly's pet"><br>
-    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=7" height="20" alt="Release version"></a>
+    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=8" height="20" alt="Release version"></a>
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
@@ -18,11 +18,9 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 - [ ] 🔄 Native PHP code generator
 - [ ] 📦 Support for external libraries and other add-ons.
 
-# 🚀 Updates for the latest version (0.2.1):
+# 🚀 Updates for the latest version (0.2.2):
 
-Awtly now supports additional languages ​​(Arabic, German, French, Portuguese, Russian, Turkish, Simplified Chinese, Spanish, and English, including various regional variations). For some of these languages, it's possible to detect the initial letter corresponding to "y/n".
-
-For now, languages ​​such as Chinese and Russian have only been tested in read-only mode; I haven't a keyboard with those characters to fully test the new languages. Perhaps in the near future, this can be done using a virtual keyboard, and any necessary adjustments will be made.
+New project restructuring: project templates in folders will now be used.
 
 # 📋 License:
 
