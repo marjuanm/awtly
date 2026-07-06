@@ -48,6 +48,8 @@ Open your command console and type `"sudo apt update && sudo apt install -y pyth
 
 If you have Synaptic installed, open it, search for "python3" and mark all the dependencies that appear, including the "python3-pip" and "python3-venv" packages if you need the package manager and virtual environments. Install everything and wait for Synaptic to complete the process.
 
+Download and unzip the project file, since the project is constantly changing due to ongoing development, it's recommended delete any existing folders and run the application from a clean project folder and not unzipping into a folder containing a previously tested version.
+
 # 🛠️ Usage (Command Line Interface)
 
 Open your console / command window, navigate to the Awtly folder and run the command `python awtly.py` (Windows) or `python3 awtly.py` (Linux). If we don't specify any parameter, we will get the following message: "Invalid number of parameters." Possible parameters (this may change in the future):
