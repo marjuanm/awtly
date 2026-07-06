@@ -10,14 +10,15 @@ import locale
 from pathlib import Path
 from gmodule import getPath
 from core.translations import getTranslation
-from core.structures.newproject import NEWPROJECT
 from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
 
 # Purpose: Create a new project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 30/06/2026
+# Last modified date: 05/07/2026
 # Last modified username: Juan Manuel Mar Hdz.
+# Thanks to chatgpt
+# Thanks to https://stackoverflow.com/questions/12683834/how-to-copy-directory-recursively-in-python-and-overwrite-all
 def newProject(projname):
     
   path = getPath()
@@ -67,53 +68,11 @@ def newProject(projname):
           
       newpath.mkdir(parents=True, exist_ok=True)
         
-      #create basic files to current project
+      #copy all files from template folder
         
       print("----------------------------------------")
       print(getTranslation("CREATINGPROJECTFILES"))
-
-      folder = newpath / "templates" #User templates folder
-      folder.mkdir(parents=True, exist_ok=True)
-        
-      folder = newpath / "assets/css" #Assets css folder
-      folder.mkdir(parents=True, exist_ok=True)
-        
-      folder = newpath / "assets/js" #Assets javascripts folder
-      folder.mkdir(parents=True, exist_ok=True)
-        
-      folder = newpath / "assets/images" #Assets images folder
-      folder.mkdir(parents=True, exist_ok=True)
-        
-      file = newpath / "project.cfg" #Main project
-      file.write_text(NEWPROJECT.PROJECT, encoding="utf-8")
-        
-      file = newpath / "pages/index.awui" #Awtly user interfaz
-      file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text(NEWPROJECT.DOCUMENT, encoding="utf-8")
-        
-      file = newpath / "pages/index.awcp" #Awtly control properties
-      file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text("/* TO DO: Add control properties here */\n\n", encoding="utf-8")
-        
-      file = newpath / "logic/index.awsc" #Awtly source code
-      file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text("/* TO DO: Add logic and events here */\n\n", encoding="utf-8")
-        
-      file = newpath / "config/routes.awrt" #Awtly routes
-      file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text("/* TO DO: Add pages routes and redirections here */\n\n", encoding="utf-8")
-        
-      file = newpath / "config/db.cfg" #Database configuration
-      file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text(NEWPROJECT.DB, encoding="utf-8")
-        
-      file = newpath / "config/cache.cfg" #Cache configuration
-      file.parent.mkdir(parents=True, exist_ok=True)
-      file.write_text(NEWPROJECT.CACHE, encoding="utf-8")
-        
-      file = newpath / "assets/css/styles.css" #Project styles
-      file.write_text(NEWPROJECT.STYLES, encoding="utf-8")
-        
+      shutil.copytree("templates/websites/blank", newpath, dirs_exist_ok=True)
       print(getTranslation("DONE"))
         
     except PermissionError:
@@ -124,7 +83,7 @@ def newProject(projname):
 # Purpose: Add a new page to project structure
 # Created date: 29/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 30/06/2026
+# Last modified date: 05/07/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def addPage(projname, page):
     
@@ -204,22 +163,19 @@ def addPage(projname, page):
       print("----------------------------------------")
       print(getTranslation("CREATINGPAGEFILES"))
 
-      file_ui = base / "pages" / f"{page.strip()}.awui"
-      file_ui.parent.mkdir(parents=True, exist_ok=True)
-      file_ui.write_text(NEWPROJECT.DOCUMENT, encoding="utf-8")
-  
-      file_cp = base / "pages" / f"{page.strip()}.awcp"
-      file_cp.parent.mkdir(parents=True, exist_ok=True)
-      file_cp.write_text("/* TO DO: Add control properties here */\n\n", encoding="utf-8")
+      awsc.parent.mkdir(parents=True, exist_ok=True)
+      shutil.copy(Path(getPath()) / "templates" / "websites" / "blank" / "logic/index.awsc", awsc)
       
-      file_sc = base / "logic" / f"{page.strip()}.awsc"
-      file_sc.parent.mkdir(parents=True, exist_ok=True)
-      file_sc.write_text("/* TO DO: Add logic and events here */\n\n", encoding="utf-8")
+      awcp.parent.mkdir(parents=True, exist_ok=True)
+      shutil.copy(Path(getPath()) / "templates" / "websites" / "blank" / "pages/index.awcp", awcp)
+      
+      awui.parent.mkdir(parents=True, exist_ok=True)
+      shutil.copy(Path(getPath()) / "templates" / "websites" / "blank" / "pages/index.awui", awui)
       
       print(getTranslation("DONE"))
         
     except PermissionError:
-      
+
       print("----------------------------------------")
       print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
             

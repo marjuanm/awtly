@@ -1,3 +1,7 @@
+0.2.2
+
+- Bug fixes (some translations were missing) and project restructuring; structures will no longer be used to create new projects due to future maintenance challenges. Instead, pre-configured folders containing the necessary files are now used, paving the way for ready-to-run project templates and, potentially, the future creation of custom components.
+
 0.2.1
 
 - Reorganized the source code by moving various files into separate folders, thereby improving project organization to maintain readability and ease of maintenance.

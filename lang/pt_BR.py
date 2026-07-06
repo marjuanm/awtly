@@ -25,6 +25,8 @@ MESSAGES = {
     "O caminho especificado não é uma pasta e não pode ser usado para executar o comando atual. O caminho atual será usado em vez disso.",
   "CONFIRMOVERWRITEPROJECT":
     "O projeto já existe.\nDeseja continuar? (s/n): ",
+  "NOGRATSTOOVERWRITEORDELETEFOLDER":
+    "Você não tem permissão para sobrescrever ou excluir a pasta do projeto.",
   "INVALIDPROJECTNAME":
     "O nome da pasta do projeto não deve conter extensões de arquivo.",
   "FOLDERPROJECTNAME":

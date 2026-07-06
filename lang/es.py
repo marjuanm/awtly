@@ -26,6 +26,8 @@ MESSAGES = {
     "La ruta especificada no es una carpeta y no se puede utilizar para ejecutar el comando actual. Se utilizará la ruta actual en su lugar.",
   "CONFIRMOVERWRITEPROJECT":
     "El proyecto ya existe.\n¿Desea continuar? (s/n): ",
+  "NOGRATSTOOVERWRITEORDELETEFOLDER":
+    "No cuenta con permisos para sobreescribir o borrar la carpeta del proyecto",
   "INVALIDPROJECTNAME":
     "El nombre de la carpeta para el proyecto no debe contener extensiones de archivo.",
   "FOLDERPROJECTNAME":

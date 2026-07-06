@@ -25,6 +25,8 @@ MESSAGES = {
     "指定的路径不是文件夹，无法用于执行当前命令。将改用当前路径。",
   "CONFIRMOVERWRITEPROJECT":
     "项目已存在。\n是否要继续？(y/n): ",
+  "NOGRATSTOOVERWRITEORDELETEFOLDER":
+    "您没有权限覆盖或删除项目文件夹",
   "INVALIDPROJECTNAME":
     "项目文件夹名称不能包含文件扩展名。",
   "FOLDERPROJECTNAME":

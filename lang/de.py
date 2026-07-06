@@ -25,6 +25,8 @@ MESSAGES = {
     "Der angegebene Pfad ist kein Ordner und kann nicht zur Ausführung des aktuellen Befehls verwendet werden. Stattdessen wird der aktuelle Pfad verwendet.",
   "CONFIRMOVERWRITEPROJECT":
     "Das Projekt existiert bereits.\nMöchten Sie fortfahren? (j/n): ",
+  "NOGRATSTOOVERWRITEORDELETEFOLDER":
+    "Sie haben keine Berechtigung, den Projektordner zu überschreiben oder zu löschen",
   "INVALIDPROJECTNAME":
     "Der Name des Projektordners darf keine Dateiendungen enthalten.",
   "FOLDERPROJECTNAME":

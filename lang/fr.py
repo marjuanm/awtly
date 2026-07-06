@@ -25,6 +25,8 @@ MESSAGES = {
     "Le chemin spécifié n'est pas un dossier et ne peut pas être utilisé pour exécuter la commande actuelle. Le chemin actuel sera utilisé à la place.",
   "CONFIRMOVERWRITEPROJECT":
     "Le projet existe déjà.\nVoulez-vous continuer ? (o/n) : ",
+  "NOGRATSTOOVERWRITEORDELETEFOLDER":
+    "Vous n'avez pas l'autorisation d'écraser ou de supprimer le dossier du projet",
   "INVALIDPROJECTNAME":
     "Le nom du dossier du projet ne doit pas contenir d'extensions de fichier.",
   "FOLDERPROJECTNAME":

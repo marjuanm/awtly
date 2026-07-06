@@ -25,6 +25,8 @@ MESSAGES = {
     "The path entered is not a folder and cannot be used to execute the current command, the current path will be used instead.",
   "CONFIRMOVERWRITEPROJECT":
     "The project already exists\nDo you want continue? (y/n): ",
+  "NOGRATSTOOVERWRITEORDELETEFOLDER":
+    "You don't have permission to overwrite or delete the project folder",
   "INVALIDPROJECTNAME":
     "The folder name for your project should not contain file extensions.",
   "FOLDERPROJECTNAME":

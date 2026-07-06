@@ -25,6 +25,8 @@ MESSAGES = {
     "Belirtilen yol bir klasör değil ve mevcut komutu yürütmek için kullanılamaz. Bunun yerine mevcut yol kullanılacaktır.",
   "CONFIRMOVERWRITEPROJECT":
     "Proje zaten mevcut.\nDevam etmek istiyor musunuz? (e/h): ",
+  "NOGRATSTOOVERWRITEORDELETEFOLDER":
+    "Proje klasörünün üzerine yazma veya klasörü silme izniniz yok",
   "INVALIDPROJECTNAME":
     "Proje klasörü adı dosya uzantıları içermemelidir.",
   "FOLDERPROJECTNAME":
