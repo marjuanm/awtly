@@ -1,0 +1,75 @@
+0.2.3
+
+- Awtly now has a repository on GitLab; although GitHub will remain the primary repository, the two will be synchronized every few weeks.
+
+- The "history.txt" file has been renamed to "CHANGELOG" to align with the GitLab format.
+
+0.2.2
+
+- Bug fixes (some translations were missing) and project restructuring; structures will no longer be used to create new projects due to future maintenance challenges. Instead, pre-configured folders containing the necessary files are now used, paving the way for ready-to-run project templates and, potentially, the future creation of custom components.
+
+0.2.1
+
+- Reorganized the source code by moving various files into separate folders, thereby improving project organization to maintain readability and ease of maintenance.
+
+- Created translation files for several languages: Arabic, German, French, Portuguese (variants for Portugal and Brazil), Russian, Turkish, and Simplified Chinese, in addition to the initial Spanish and English versions (noting that these two languages ​​also have specific variants for Mexico, Spain, the USA, and England, respectively).
+
+- Made various adjustments to ensure Awtly recognizes initial letters in different languages ​​as "yes/no" (y/n) equivalents—specifically the letters 's', 'y', 'j', 'o' and 'e'. However, since some languages ​​don't use standard text input, testing with Chinese characters was not possible; future testing might be conducted using virtual keyboards (if available) for these languages ​​to make any necessary adjustments.
+
+0.2.0
+
+- Awtly now supports translation files for its operation (specifically, .py files located in the project's `lang` folder). Previously, everything was loaded from a data structure using an ID to retrieve the correct element.
+
+0.1.6
+
+- Implemented the "addpage" command, this allows adding new pages to the project by creating the necessary files to start working.
+
+- Updated project help to include documentation for the "addpage" command.
+
+0.1.5
+
+- Successfully tested on Linux: the "new" command can create folders with full paths to other folders; a header indicating the project name, license, and basic file details has been added to all .py files.
+
+- Implemented the "delete" command, which can remove a project folder—either from the location of the main Awtly script or from a specified path. Use with caution.
+
+- Corrections to source code.
+
+
+0.1.4
+
+- Improvements to the index.awui file template. The format now allows for the creation of workspaces within the document.
+
+- The file "newprojectstructure.py" was renamed to "structures.py" to allow the different data structures needed for the project to be saved in a single file. The graphical components will be saved in a separate file for better readability in the project.
+
+- Fixed an issue when using absolute paths for the "new" command; it was not creating the project folder. It now works with both relative paths (same folder as Awtly) and absolute or full paths.
+
+- Minor changes to the new project template, as well as the creation of the "savetolog" template in preparation for future pre-built functions to handle logs in the Laravel style.
+
+
+0.1.3
+
+- First implementation of project creation using the "new" command; it now generates the basic files for a new project.
+
+- Improvements to the "new" command: it not only generates the basic files (which were empty in the previous step), but also organizes them into folders for better project readability and injects basic templates if needed.
+
+0.1.25
+
+- Corrections to the "new" command: it now asks for confirmation if you want to continue if the project already exists. This was already implemented, but the dialog text has been simplified.
+
+0.1.2
+
+- Implementation of the getPath function to obtain the path from where the awtly.py script is executed; checks will be made to test that it works on Linux.
+- The getPath function works perfectly on Windows, but on Linux the script started producing errors; you have to define 'Final' for constants using 'from typing import Final'.
+- Partial implementation of the "new" command; it can now create a folder for the project, but it has only been tested locally. It hasn't yet been tested with absolute paths to see if it works. If the folder already exists, Awtly will ask if you want to delete it and create it again, overwriting the contents of the previous folder in the process. If you choose "No," the folder will remain, and the core files will be overwritten.
+
+0.1.1
+
+- Minor fixes: The "Help" command (help, /?, and -h) has been implemented displaying general help on the commands supported by Awtly.
+- The -v command has been implemented to display the current Awtly version.
+- Awtly now checks if basic commands are incomplete and suggests using the "Help" command to ensure the user types the commands correctly.
+
+0.1.0
+
+- The Awtly project begins, it aims to create a programming language that is easy to learn and implement, but that transpiles to PHP with the ability to create advanced projects with little effort.
+- First implementation in Python, it already detects the basic commands to run the transpiler (new, delete, and build), although for now they do nothing.
+- The first message translator was created to display notices in the operating system's language.
