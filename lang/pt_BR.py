@@ -29,6 +29,10 @@ MESSAGES = {
     "Você não tem permissão para sobrescrever ou excluir a pasta do projeto.",
   "INVALIDPROJECTNAME":
     "O nome da pasta do projeto não deve conter extensões de arquivo.",
+  "INVALIDTEMPLATENAME":
+    "O nome da pasta do modelo não pode conter uma extensão de arquivo.",
+  "TEMPLATENOTFOUND":
+    "A pasta de modelos não foi encontrada.",
   "FOLDERPROJECTNAME":
     "Pasta do projeto",
   "CREATINGPROJECTFILES":

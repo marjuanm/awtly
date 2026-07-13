@@ -29,6 +29,10 @@ MESSAGES = {
     "You don't have permission to overwrite or delete the project folder",
   "INVALIDPROJECTNAME":
     "The folder name for your project should not contain file extensions.",
+  "INVALIDTEMPLATENAME":
+    "The template folder name should not contain file extensions.",
+  "TEMPLATENOTFOUND":
+    "The template folder was not found.",
   "FOLDERPROJECTNAME":
     "Folder project name",
   "CREATINGPROJECTFILES":

@@ -30,6 +30,10 @@ MESSAGES = {
     "No cuenta con permisos para sobreescribir o borrar la carpeta del proyecto",
   "INVALIDPROJECTNAME":
     "El nombre de la carpeta para el proyecto no debe contener extensiones de archivo.",
+  "INVALIDTEMPLATENAME":
+    "El nombre de la carpeta de plantilla no debe contener extensiones de archivo.",
+  "TEMPLATENOTFOUND":
+    "No se encuentra la carpeta de la plantilla.",
   "FOLDERPROJECTNAME":
     "Carpeta del proyecto",
   "CREATINGPROJECTFILES":

@@ -1,3 +1,7 @@
+0.2.4
+
+- Fixed errors where the "new" and "addpage" commands failed under certain conditions; code cleanup and optimization.
+
 0.2.3
 
 - Awtly now has a repository on GitLab; although GitHub will remain the primary repository, the two will be synchronized every few weeks.

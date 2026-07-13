@@ -10,175 +10,27 @@ import locale
 from pathlib import Path
 from gmodule import getPath
 from core.translations import getTranslation
+from core.cmd_actions.newproject_action import newProjectAction
+from core.cmd_actions.addpage_action import addPageAction
 from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
 
 # Purpose: Create a new project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 05/07/2026
+# Last modified date: 07/07/2026
 # Last modified username: Juan Manuel Mar Hdz.
 # Thanks to chatgpt
-# Thanks to https://stackoverflow.com/questions/12683834/how-to-copy-directory-recursively-in-python-and-overwrite-all
-def newProject(projname):
-    
-  path = getPath()
-  createproject = True  
-  projname_clean = projname.strip()
-  candidate = Path(projname_clean)
-  
-  # use the correct path
-  newpath = candidate if candidate.is_absolute() else path / candidate  
-    
-  if newpath.suffix.strip() != "":
-        
-    createproject = False
-    print(getTranslation("INVALIDPROJECTNAME"))
-        
-  else:
-        
-    if newpath.exists():
-    
-      if newpath.is_dir():
-        
-        reply = input(getTranslation("CONFIRMOVERWRITEPROJECT")).strip().lower()
-        
-        if reply in ['s', 'y', 'j', 'o', 'e']:
-        
-          # delete project folder first
-          
-          try:  
-            shutil.rmtree(newpath)
-          except PermissionError:
-              
-            print("----------------------------------------")
-            print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
-            createproject = False
-            
-        else:  
-          createproject = False
-          
-      else:
-        
-        print(getTranslation("INVALIDPROJECTNAME"))
-        createproject = False
-        
-  if createproject ==  True:
-    
-    try:
-          
-      newpath.mkdir(parents=True, exist_ok=True)
-        
-      #copy all files from template folder
-        
-      print("----------------------------------------")
-      print(getTranslation("CREATINGPROJECTFILES"))
-      shutil.copytree("templates/websites/blank", newpath, dirs_exist_ok=True)
-      print(getTranslation("DONE"))
-        
-    except PermissionError:
-      
-      print("----------------------------------------")
-      print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
-      
+def newProject(projname, projtype, template):
+  newProjectAction(projname, projtype, template)
+
 # Purpose: Add a new page to project structure
 # Created date: 29/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 05/07/2026
+# Last modified date: 13/07/2026
 # Last modified username: Juan Manuel Mar Hdz.
-def addPage(projname, page):
+def addPage(projname, page, template):
+  addPageAction(projname, page, template) 
     
-  path = getPath()
-  updateproject = True  
-  projname_clean = projname.strip()
-  candidate = Path(projname_clean)
-  
-  # use the correct path
-  newpath = candidate if candidate.is_absolute() else path / candidate  
-    
-  if newpath.suffix.strip() != "":
-        
-    updateproject = False
-    print(getTranslation("INVALIDPROJECTNAME"))
-        
-  else:
-        
-    if not newpath.exists():
-    
-      updateproject = False
-      print(getTranslation("FOLDERPROJECTNAMENOTFOUND"))
-      
-    else:
-        
-      filename, filext = os.path.splitext(page.strip())
-      
-      if filext != "":
-          
-        print(getTranslation("INVALIDPAGENAME"))
-        updateproject = False
-
-      else:
-          
-        base = Path(newpath)
-        file = page.strip()
-        
-        awsc = base / "logic" / f"{file}.awsc"
-        awcp = base / "pages" / f"{file}.awcp"
-        awui = base / "pages" / f"{file}.awui"
-        
-        if awsc.exists() or awcp.exists() or awui.exists():
-          reply = input(getTranslation("CONFIRMOVERWRITEPAGE")).strip().lower()
-        else:
-          reply = "y"
-          
-        if reply in ['s', 'y', 'j', 'o', 'e']:
-        
-          # delete new page files first
-          
-          try:  
-              
-            if awsc.exists():
-              awsc.unlink()
-              
-            if awcp.exists():
-              awcp.unlink()
-              
-            if awui.exists():
-              awui.unlink()
-          
-          except PermissionError:
-              
-            print("----------------------------------------")
-            print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
-            updateproject = False
-            
-        else:  
-          updateproject = False
-        
-  if updateproject ==  True:
-    
-    try:
-          
-      #add page basic files to current project
-        
-      print("----------------------------------------")
-      print(getTranslation("CREATINGPAGEFILES"))
-
-      awsc.parent.mkdir(parents=True, exist_ok=True)
-      shutil.copy(Path(getPath()) / "templates" / "websites" / "blank" / "logic/index.awsc", awsc)
-      
-      awcp.parent.mkdir(parents=True, exist_ok=True)
-      shutil.copy(Path(getPath()) / "templates" / "websites" / "blank" / "pages/index.awcp", awcp)
-      
-      awui.parent.mkdir(parents=True, exist_ok=True)
-      shutil.copy(Path(getPath()) / "templates" / "websites" / "blank" / "pages/index.awui", awui)
-      
-      print(getTranslation("DONE"))
-        
-    except PermissionError:
-
-      print("----------------------------------------")
-      print(getTranslation("NOGRATSTOOVERWRITEORDELETEFOLDER"))
-            
 # Purpose: Delete a project
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.

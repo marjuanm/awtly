@@ -29,6 +29,10 @@ MESSAGES = {
     "您没有权限覆盖或删除项目文件夹",
   "INVALIDPROJECTNAME":
     "项目文件夹名称不能包含文件扩展名。",
+  "INVALIDTEMPLATENAME":
+    "模板文件夹名称不能包含文件扩展名。",
+  "TEMPLATENOTFOUND":
+    "未找到模板文件夹。",
   "FOLDERPROJECTNAME":
     "项目文件夹",
   "CREATINGPROJECTFILES":

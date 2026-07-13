@@ -29,6 +29,10 @@ MESSAGES = {
     "لا تملك أذونات الكتابة فوق مجلد المشروع أو حذفه",
   "INVALIDPROJECTNAME":
     "يجب ألا يحتوي اسم مجلد المشروع على امتدادات ملفات.",
+  "INVALIDTEMPLATENAME":
+    "يجب ألا يحتوي اسم مجلد القالب على امتدادات ملفات.", 
+  "TEMPLATENOTFOUND":
+    "لم يتم العثور على مجلد القوالب.",
   "FOLDERPROJECTNAME":
     "مجلد المشروع",
   "CREATINGPROJECTFILES":

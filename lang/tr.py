@@ -29,6 +29,10 @@ MESSAGES = {
     "Proje klasörünün üzerine yazma veya klasörü silme izniniz yok",
   "INVALIDPROJECTNAME":
     "Proje klasörü adı dosya uzantıları içermemelidir.",
+  "INVALIDTEMPLATENAME":
+    "Şablon klasörü adı dosya uzantısı içeremez.",
+  "TEMPLATENOTFOUND":
+    "Şablon klasörü bulunamadı.",
   "FOLDERPROJECTNAME":
     "Proje klasörü",
   "CREATINGPROJECTFILES":

@@ -29,6 +29,10 @@ MESSAGES = {
     "Vous n'avez pas l'autorisation d'écraser ou de supprimer le dossier du projet",
   "INVALIDPROJECTNAME":
     "Le nom du dossier du projet ne doit pas contenir d'extensions de fichier.",
+  "INVALIDTEMPLATENAME":
+    "Le nom du dossier de modèle ne peut pas contenir d'extension de fichier.",
+  "TEMPLATENOTFOUND":
+    "Le dossier de modèles est introuvable.",
   "FOLDERPROJECTNAME":
     "Dossier du projet",
   "CREATINGPROJECTFILES":

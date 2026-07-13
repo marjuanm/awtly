@@ -29,6 +29,10 @@ MESSAGES = {
     "Sie haben keine Berechtigung, den Projektordner zu überschreiben oder zu löschen",
   "INVALIDPROJECTNAME":
     "Der Name des Projektordners darf keine Dateiendungen enthalten.",
+  "INVALIDTEMPLATENAME":
+    "Der Name des Vorlagenordners darf keine Dateiendungen enthalten.",
+  "TEMPLATENOTFOUND":
+    "Der Vorlagenordner wurde nicht gefunden.",
   "FOLDERPROJECTNAME":
     "Projektordner",
   "CREATINGPROJECTFILES":

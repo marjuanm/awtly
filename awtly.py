@@ -16,7 +16,7 @@ from core.commands import newProject, addPage, deleteProject, buildProject, help
 # Purpose: Main function
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 30/06/2026
+# Last modified date: 13/07/2026
 # Last modified username: Juan Manuel Mar Hdz.
 if len(sys.argv) <= 2:
     
@@ -46,14 +46,38 @@ else:
   projname = sys.argv[2]
 
   if cmd.lower() == "new":
-    newProject(projname)
+      
+    #create a new project or another component
+    
+    if projname.strip().lower() == "website":
+       
+      if len(sys.argv) == 4:
+        newProject(sys.argv[3], "website", "templates/websites/blank") #use blank template
+      else:
+        newProject(sys.argv[3], "website", sys.argv[4]) #use this template
+    
+    else:
+        
+      if len(sys.argv) == 3:
+        newProject(sys.argv[2], "website", "templates/websites/blank") #use blank template
+      else:
+        newProject(sys.argv[2], "website", sys.argv[3]) #use this template
+    
+    #create a new project or another component
+    
   elif cmd.lower() == "addpage":
       
+    #add blank page to project
+    
     if len(sys.argv) <= 3:
       print(getTranslation("INCOMPLETECOMMAND"))
+    elif len(sys.argv) == 4:
+      addPage(projname, sys.argv[3], "templates/websites/blank") #use blank template
     else:
-      addPage(projname, sys.argv[3])
-      
+      addPage(projname, sys.argv[3], sys.argv[4]) #use this template
+    
+    #add blank page to project
+    
   elif cmd.lower() == "delete":
     deleteProject(projname)    
   elif cmd.lower() == "build":
