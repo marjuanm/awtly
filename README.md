@@ -18,9 +18,9 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 - [ ] 🔄 Native PHP code generator
 - [ ] 📦 Support for external libraries and other add-ons.
 
-# 🚀 Updates for the latest version (0.2.3):
+# 🚀 Updates for the latest version (0.2.4):
 
-Awtly now has a repository on <b><a href="https://gitlab.com/marjuanm/awtly">GitLab</a></b>!; although GitHub will remain the primary repository, the two will be synchronized every few weeks.
+Various code corrections and optimizations; the "new" and "addpage" commands were not working correctly under certain circumstances.
 
 # 📋 License:
 
