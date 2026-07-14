@@ -24,7 +24,7 @@ Awtly has completed the coding and optimization/refactoring required to handle b
 
 Starting with version 0.2.5, development of the "build" command—designed to transpile Awtly code into PHP—will begin. This does not mean a functional project can be generated immediately; rather, the necessary infrastructure to build such a project will be developed incrementally.
 
-A release for this version has also been created to mark a milestone in the project's history (releases will be issued whenever key milestones in Awtly's development are reached).
+A release <a href="https://github.com/marjuanm/awtly/releases/tag/v0.2.5">for this version</a> has also been created to mark a milestone in the project's history (releases will be issued whenever key milestones in Awtly's development are reached).
 
 # 📋 License:
 
