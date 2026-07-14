@@ -1,6 +1,6 @@
 # Awtly - php transpiller util
 # Original file name: gmodule.py
-# Copyright (c) 2026 Juan Manuel Mar Hdz.
+# Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
 from pathlib import Path
