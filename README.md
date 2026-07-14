@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png?v=2" width="auto" height="331" alt="Awtly's pet"><br>
-    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=12" height="20" alt="Release version"></a>
+    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=13" height="20" alt="Release version"></a>
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
@@ -18,9 +18,13 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 - [ ] 🔄 Native PHP code generator
 - [ ] 📦 Support for external libraries and other add-ons.
 
-# 🚀 Updates for the latest version (0.2.4):
+# 🚀 Updates for the latest version (0.2.5):
 
-Various code corrections and optimizations; the "new" and "addpage" commands were not working correctly under certain circumstances.
+Awtly has completed the coding and optimization/refactoring required to handle basic SDK commands via the command line.
+
+Starting with version 0.2.5, development of the "build" command—designed to transpile Awtly code into PHP—will begin. This does not mean a functional project can be generated immediately; rather, the necessary infrastructure to build such a project will be developed incrementally.
+
+A release for this version has also been created to mark a milestone in the project's history (releases will be issued whenever key milestones in Awtly's development are reached).
 
 # 📋 License:
 
