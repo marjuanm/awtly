@@ -75,3 +75,21 @@ This will display specific help if you type the name of a command after the comm
 
 * `python awtly.py` -v<br>
 This will display information about the current version of the Awtly IDE.
+
+# ❤️ Donations
+
+Awtly is a free project licensed under the GPL-3; anyone can download the source code and run the transpiler, provided they meet the necessary requirements. This is not a commercial project and is sustained through voluntary donations; if you wish to donate and support this project, you can do so via the following platforms.
+
+* ⭐ <a href="https://github.com/sponsors/marjuanm?frequency=recurring" target="_blank">GitHub Sponsors</a>
+* ☕ <a href="https://ko-fi.com/msproys" target="_blank">Ko-fi</a>
+* 💳 <a href="https://www.paypal.com/donate/?business=73JT73SJF2HXY&no_recurring=0&item_name=Thank+you+for+donating+and+supporting+my+projects.+If+you+don%27t+need+a+commercial+license%2C+any+donation+helps.+Many+thanks%21&currency_code=MXN" target="_blank">PayPal</a>
+
+# 🤝 Community Support
+
+* Awtly is an open-source project developed and maintained in my spare time. While I strive to continuously improve the project, the time I can dedicate to it is limited.
+* Bug reports, feature requests, and suggestions for improvement are always welcome. All requests will be reviewed based on available time, project priorities, and implementation feasibility.
+* Currently, there is no Service Level Agreement (SLA) or guaranteed technical support for users who are not project sponsors. This means I cannot guarantee response times or specific dates for bug fixes or the implementation of new features.
+* Sponsors help fund the ongoing development of Awtly. As a token of appreciation, their bug reports, feature requests, and support inquiries may receive higher priority during the review and handling process.
+* If you are a sponsor and wish for your request to be considered with such priority (this feature is not yet enabled in this repository), please include a reference that identifies your sponsorship or donation, such as a link to your GitHub Sponsors profile or proof of a donation made via another method.
+* All bug fixes, improvements, and new features will be published in the official Awtly repositories. Prioritizing a request does not mean the improvements are exclusive to sponsors; once implemented, they will be available to the entire community in accordance with the project's license.
+* Pull requests are always welcome. Contributions that are high-quality, properly documented, include tests where possible, and adhere to the project's development style are more likely to be accepted.
