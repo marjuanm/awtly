@@ -45,6 +45,16 @@ MESSAGES = {
     "Proyecto no encontrado.",
   "FOLDERPROJECTNAMENOTFOUND":
     "Proyecto no encontrado.",
+  "PROJECTFILENOTFOUND": 
+    "No se ha encontrado el archivo de proyecto",
+  "FILENOTFOUND": 
+    "No se ha encontrado el archivo",
+  "INVALIDCONFIGURATIONLINE": 
+    "Línea no válida en el archivo de configuración",
+  "EMPTYCONFIGURATIONKEY": 
+    "Clave vacía en el archivo de configuración",
+  "DUPLICATECONFIGURATIONKEY": 
+    "Clave duplicada en el archivo de configuración",
   "CONFIRMOVERWRITEPAGE":
     "Algunos archivos ya existen y se sobrescribirán.\n¿Desea continuar? (s/n): ",
   "CREATINGPAGEFILES":

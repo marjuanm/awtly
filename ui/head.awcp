@@ -1,0 +1,46 @@
+head
+{
+
+  meta
+  {
+    charset = "UTF-8"
+  }
+	
+	meta
+  {
+    
+    http-equiv = "Content-Type"
+    content = "text/html"
+    
+	}
+	
+	meta
+	{
+	
+		name = "description"
+		value = ""
+		
+	}
+	
+	meta
+	{
+	
+		name = "keywords"
+		value = ""
+		
+	}
+	
+	title
+	{
+    text = ""
+	}
+	
+	meta
+	{
+	
+		name = "viewport"
+		content = "width=device-width, initial-scale=1.0"
+	
+	}
+	
+}

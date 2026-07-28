@@ -13,6 +13,7 @@ from core.translations import getTranslation
 from core.cmd_actions.newproject_action import newProjectAction
 from core.cmd_actions.addpage_action import addPageAction
 from core.cmd_actions.deleteproject_action import deleteProjectAction
+from core.cmd_actions.buildproject_action import buildProjectAction
 from core.cmd_actions.help_action import helpAction
 from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
 
@@ -44,10 +45,10 @@ def deleteProject(projname):
 # Purpose: Build a project (transpiler action)
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 12/06/2026
+# Last modified date: 28/07/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def buildProject(projname):
-  print("Convertiré el proyecto '" + projname + "' en su equivalente php\nLa ruta actual es: " + getPath())
+  buildProjectAction(projname)
   
 # Purpose: Show version
 # Created date: 10/06/2026

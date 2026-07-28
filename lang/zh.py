@@ -45,6 +45,16 @@ MESSAGES = {
     "未找到项目",
   "FOLDERPROJECTNAMENOTFOUND":
     "未找到项目",
+  "PROJECTFILENOTFOUND":
+    "未找到项目文件",
+  "FILENOTFOUND":
+    "找不到文件",
+  "INVALIDCONFIGURATIONLINE":
+    "配置文件中存在无效行",
+  "EMPTYCONFIGURATIONKEY":
+    "配置文件中存在空键",
+  "DUPLICATECONFIGURATIONKEY":
+    "配置文件中存在重复键",
   "CONFIRMOVERWRITEPAGE":
     "某些文件已存在并将 fish 被覆盖。\n是否要继续？(y/n): ",
   "CREATINGPAGEFILES":

@@ -45,6 +45,16 @@ MESSAGES = {
     "Project not found",
   "FOLDERPROJECTNAMENOTFOUND":
     "Project not found",
+  "PROJECTFILENOTFOUND":
+    "Project file not found",
+  "FILENOTFOUND":
+    "File not found",
+  "INVALIDCONFIGURATIONLINE": 
+    "Invalid line in configuration file",
+  "EMPTYCONFIGURATIONKEY": 
+    "Empty key in configuration file",
+  "DUPLICATECONFIGURATIONKEY": 
+    "Duplicate key in configuration file",
   "CONFIRMOVERWRITEPAGE":
     "Some files already exist and will be overwritten.\nDo you want to continue? (y/n): ",
   "CREATINGPAGEFILES":

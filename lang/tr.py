@@ -45,6 +45,16 @@ MESSAGES = {
     "Proje bulunamadı",
   "FOLDERPROJECTNAMENOTFOUND":
     "Proje bulunamadı",
+  "PROJECTFILENOTFOUND":
+    "Proje dosyası bulunamadı",
+  "FILENOTFOUND":
+    "Dosya bulunamadı",
+  "INVALIDCONFIGURATIONLINE":
+    "Yapılandırma dosyasında geçersiz satır"
+  "EMPTYCONFIGURATIONKEY":
+    "Yapılandırma dosyasında boş anahtar"
+  "DUPLICATECONFIGURATIONKEY":
+    "Yapılandırma dosyasında yinelenen anahtar",
   "CONFIRMOVERWRITEPAGE":
     "Bazı dosyalar zaten mevcut ve üzerlerine yazılacak.\nDevam etmek istiyor musunuz? (e/h): ",
   "CREATINGPAGEFILES":

@@ -45,6 +45,16 @@ MESSAGES = {
     "المشروع غير موجود",
   "FOLDERPROJECTNAMENOTFOUND":
     "المشروع غير موجود",
+  "PROJECTFILENOTFOUND":
+    "ملف المشروع غير موجود",
+  "FILENOTFOUND":
+    "مفتاح مكرر في ملف الإعدادات",
+  "INVALIDCONFIGURATIONLINE":  
+    "الملف غير موجود",
+  "EMPTYCONFIGURATIONKEY":  
+    "سطر غير صالح في ملف الإعدادات",
+  "DUPLICATECONFIGURATIONKEY":  
+    "مفتاح فارغ في ملف الإعدادات",
   "CONFIRMOVERWRITEPAGE":
     "بعض الملفات موجودة بالفعل وسيتم استبدالها.\nهل تريد الاستمرار؟ (y/n): ",
   "CREATINGPAGEFILES":

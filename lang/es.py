@@ -7,7 +7,6 @@ from constants import PROJECT_SHORT_NAME
 
 # Generic Spanish translation file
 MESSAGES = {
-	
   "INVALIDPARAMSNUMBER":
 	"Número de parámetros no válido",
   "UNKNOWNCOMMAND":
@@ -46,6 +45,16 @@ MESSAGES = {
     "Proyecto no encontrado",
   "FOLDERPROJECTNAMENOTFOUND":
     "Proyecto no encontrado",
+  "PROJECTFILENOTFOUND": 
+    "No se encontró el archivo del proyecto",
+  "FILENOTFOUND": 
+    "No se encontró el archivo",
+  "INVALIDCONFIGURATIONLINE": 
+    "Línea no válida en el archivo de configuración",
+  "EMPTYCONFIGURATIONKEY": 
+    "Clave vacía en el archivo de configuración",
+  "DUPLICATECONFIGURATIONKEY": 
+    "Clave duplicada en el archivo de configuración",
   "CONFIRMOVERWRITEPAGE":
     "Algunos archivos ya existen y se sobrescribirán.\n¿Desea continuar? (s/n): ",
   "CREATINGPAGEFILES":
@@ -55,6 +64,5 @@ MESSAGES = {
   "INVALIDPAGENAME":
     "El nombre de la página para agregar al proyecto no debe contener extensiones de archivo.",
   "INVALIDID":
-    "ID de traducción no válido"			
-						
+    "ID de traducción no válido"							
 }

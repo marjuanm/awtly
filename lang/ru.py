@@ -45,6 +45,16 @@ MESSAGES = {
     "Проект не найден",
   "FOLDERPROJECTNAMENOTFOUND":
     "Проект не найден",
+  "PROJECTFILENOTFOUND":
+    "Файл проекта не найден",
+  "FILENOTFOUND":
+    "Файл не найден",
+  "INVALIDCONFIGURATIONLINE":
+    "Некорректная строка в файле конфигурации",
+  "EMPTYCONFIGURATIONKEY":
+    "Пустой ключ в файле конфигурации",
+  "DUPLICATECONFIGURATIONKEY":
+    "Дублирующийся ключ в файле конфигурации",
   "CONFIRMOVERWRITEPAGE":
     "Некоторые файлы уже существуют и будут перезаписаны.\nХотите продолжить? (y/n): ",
   "CREATINGPAGEFILES":

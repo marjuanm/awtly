@@ -1,3 +1,8 @@
+0.2.6
+
+- A very preliminary version of what the .awcp and PHP files for transpiling graphical components might look like.
+- A very preliminary version of the "build" command; so far, it only checks for the presence of the "project.cfg" file in the project folder, and if found, extracts the "ndex"and "ssets" Keys to proceed with the compilation process.
+
 0.2.5
 
 - Reorganize the source code by moving various files into different folders, thereby better organizing the project to maintain readability and ease of maintenance.

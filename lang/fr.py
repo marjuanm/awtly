@@ -45,6 +45,16 @@ MESSAGES = {
     "Projet introuvable",
   "FOLDERPROJECTNAMENOTFOUND":
     "Projet introuvable",
+  "PROJECTFILENOTFOUND":
+    "Fichier de projet introuvable",
+  "FILENOTFOUND":
+    "Fichier introuvable",
+  "INVALIDCONFIGURATIONLINE":
+    "Ligne invalide dans le fichier de configuration",
+  "EMPTYCONFIGURATIONKEY":
+    "Clé vide dans le fichier de configuration",
+  "DUPLICATECONFIGURATIONKEY":
+    "Clé en double dans le fichier de configuration",
   "CONFIRMOVERWRITEPAGE":
     "Certains fichiers existent déjà et seront écrasés.\nVoulez-vous continuer ? (o/n) : ",
   "CREATINGPAGEFILES":
