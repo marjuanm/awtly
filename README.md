@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png?v=2" width="auto" height="331" alt="Awtly's pet"><br>
-    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=13" height="20" alt="Release version"></a>
+    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=14" height="20" alt="Release version"></a>
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
@@ -18,13 +18,9 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 - [ ] 🔄 Native PHP code generator
 - [ ] 📦 Support for external libraries and other add-ons.
 
-# 🚀 Updates for the latest version (0.2.5):
+# 🚀 Updates for the latest version (0.2.6):
 
-Awtly has completed the coding and optimization/refactoring required to handle basic SDK commands via the command line.
-
-Starting with version 0.2.5, development of the "build" command—designed to transpile Awtly code into PHP—will begin. This does not mean a functional project can be generated immediately; rather, the necessary infrastructure to build such a project will be developed incrementally.
-
-A release <a href="https://github.com/marjuanm/awtly/releases/tag/v0.2.5">for this version</a> has also been created to mark a milestone in the project's history (releases will be issued whenever key milestones in Awtly's development are reached).
+The initial steps have been taken to implement the "build" command; for now, it simply checks for the presence of the configuration file for the project to be transpiled. If found, it extracts the contents of the "index" and "assets" variables, which will serve as the basis for understanding the project's structure.
 
 # 📋 License:
 
@@ -75,6 +71,10 @@ This will display specific help if you type the name of a command after the comm
 
 * `python awtly.py` -v<br>
 This will display information about the current version of the Awtly IDE.
+
+# 🌟 Milestones:
+
+<a href="https://github.com/marjuanm/awtly/releases/tag/v0.2.5">0.2.5</a> Awtly now works correctly with all basic commands (except `build`), displaying status and error messages in the various languages ​​for which translations are available.
 
 # ❤️ Donations
 
