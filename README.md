@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png?v=2" width="auto" height="331" alt="Awtly's pet"><br>
-    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=14" height="20" alt="Release version"></a>
+    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=15" height="20" alt="Release version"></a>
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
@@ -13,14 +13,14 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 # 🗺️ Development Roadmap
 
 - [x] 🐺 Visual identity and core concept
-- [ ] ⚙️ Lexical Analyzer (Lexer) core
+- [/] ⚙️ Lexical Analyzer (Lexer) core
 - [ ] 🧠 Final syntax definition (Python/Lua hybrid)
 - [ ] 🔄 Native PHP code generator
 - [ ] 📦 Support for external libraries and other add-ons.
 
-# 🚀 Updates for the latest version (0.2.6):
+# 🚀 Updates for the latest version (0.2.7):
 
-The initial steps have been taken to implement the "build" command; for now, it simply checks for the presence of the configuration file for the project to be transpiled. If found, it extracts the contents of the "index" and "assets" variables, which will serve as the basis for understanding the project's structure.
+Reorganize part of the source code to move several files to more convenient sections.
 
 # 📋 License:
 
