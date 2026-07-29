@@ -8,7 +8,7 @@ import shutil
 import locale
 
 from pathlib import Path
-from gmodule import getPath
+from common.functions import getPath
 from core.translations import getTranslation
 
 # Purpose: Add a new page to project structure

@@ -8,7 +8,7 @@ import shutil
 import locale
 
 from pathlib import Path
-from gmodule import getPath
+from common.functions import getPath
 from core.translations import getTranslation
 from core.cmd_templates.newwebsite import newWebsite
 

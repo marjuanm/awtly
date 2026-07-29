@@ -1,3 +1,7 @@
+0.2.7
+
+- Reorganize part of the source code to move several files to more convenient sections.
+
 0.2.6
 
 - A very preliminary version of what the .awcp and PHP files for transpiling graphical components might look like.

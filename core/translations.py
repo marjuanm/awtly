@@ -6,7 +6,7 @@
 import locale
 import importlib
 
-from constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME
 
 # Purpose: Get translation
 # Created date: 08/06/2026

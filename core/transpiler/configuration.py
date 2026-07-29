@@ -4,9 +4,9 @@
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
 from pathlib import Path
-from gmodule import getConfig
+from common.vars import index, assets
+from common.functions import getConfig
 from core.translations import getTranslation
-from core.transpiler.gproject import index, assets
 
 # Purpose: Load configuration from project file
 # Created date: 28/07/2026

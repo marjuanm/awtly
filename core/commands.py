@@ -8,14 +8,14 @@ import shutil
 import locale
 
 from pathlib import Path
-from gmodule import getPath
+from common.functions import getPath
 from core.translations import getTranslation
 from core.cmd_actions.newproject_action import newProjectAction
 from core.cmd_actions.addpage_action import addPageAction
 from core.cmd_actions.deleteproject_action import deleteProjectAction
 from core.cmd_actions.buildproject_action import buildProjectAction
 from core.cmd_actions.help_action import helpAction
-from constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
+from common.constants import PROJECT_NAME, PROJECT_SHORT_NAME, PROJECT_VERSION, PROJECT_YEAR, TEAM_NAME
 
 # Purpose: Create a new project
 # Created date: 08/06/2026

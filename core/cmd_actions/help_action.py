@@ -8,9 +8,9 @@ import shutil
 import locale
 
 from pathlib import Path
-from gmodule import getPath
+from common.functions import getPath
 from core.translations import getTranslation
-from constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME
 
 # Purpose: Show help
 # Created date: 10/06/2026

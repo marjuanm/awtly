@@ -3,7 +3,7 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-from constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME
 
 # Mexico translation file
 MESSAGES = {
