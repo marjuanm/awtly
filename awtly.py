@@ -7,6 +7,7 @@ import sys
 import importlib
 
 from core.translations import getTranslation
+from core.cmd_actions.help_action import helpAction
 from core.commands import newProject, addPage, deleteProject, buildProject, help, version
    
 # sys.argv[0] program name ("awtly.py")
@@ -16,7 +17,7 @@ from core.commands import newProject, addPage, deleteProject, buildProject, help
 # Purpose: Main function
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 13/07/2026
+# Last modified date: 30/07/2026
 # Last modified username: Juan Manuel Mar Hdz.
 if len(sys.argv) <= 2:
     
@@ -49,7 +50,9 @@ else:
       
     #create a new project or another component
     
-    if projname.strip().lower() == "website":
+    if projname.strip().lower() == "/?":
+      helpAction("new")
+    elif projname.strip().lower() == "website":
        
       if len(sys.argv) == 4:
         newProject(sys.argv[3], "website", "templates/websites/blank") #use blank template
@@ -69,7 +72,9 @@ else:
       
     #add blank page to project
     
-    if len(sys.argv) <= 3:
+    if projname.strip().lower() == "/?":
+      helpAction("addpage")
+    elif len(sys.argv) <= 3:
       print(getTranslation("INCOMPLETECOMMAND"))
     elif len(sys.argv) == 4:
       addPage(projname, sys.argv[3], "templates/websites/blank") #use blank template
@@ -79,9 +84,19 @@ else:
     #add blank page to project
     
   elif cmd.lower() == "delete":
-    deleteProject(projname)    
+    
+    if projname.strip().lower() == "/?":
+      helpAction("delete")
+    else:
+      deleteProject(projname)    
+  
   elif cmd.lower() == "build":
-    buildProject(projname)
+    
+    if projname.strip().lower() == "/?":
+      helpAction("build")
+    else:
+      buildProject(projname)
+  
   elif cmd.lower() == "help" or cmd.lower() == "/?" or cmd.lower() == "-h":
       
     if cmd.lower() == "/?":

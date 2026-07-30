@@ -1,3 +1,7 @@
+0.2.8
+
+- Rewrote the help module to incorporate new parameters for creating or adding pages to the project. Awtly now also supports help requests using "command /?" format.
+
 0.2.7
 
 - Reorganize part of the source code to move several files to more convenient sections.
