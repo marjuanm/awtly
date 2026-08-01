@@ -82,7 +82,7 @@ Awtly is a free project licensed under the GPL-3; anyone can download the source
 
 * ⭐ <a href="https://github.com/sponsors/marjuanm?frequency=recurring" target="_blank">GitHub Sponsors</a>
 * ☕ <a href="https://ko-fi.com/msproys" target="_blank">Ko-fi</a>
-* 💳 <a href="https://www.paypal.com/donate/?business=73JT73SJF2HXY&no_recurring=0&item_name=Thank+you+for+donating+and+supporting+my+projects.+If+you+don%27t+need+a+commercial+license%2C+any+donation+helps.+Many+thanks%21&currency_code=MXN" target="_blank">PayPal</a>
+* 💳 <a href="https://www.paypal.com/donate/?business=73JT73SJF2HXY&amount=1&no_recurring=0&item_name=Thank+you+for+donating+and+supporting+my+projects.+If+you+don%27t+need+a+commercial+license%2C+any+donation+helps.+Many+thanks%21&currency_code=USD" target="_blank">PayPal</a>
 
 # 🤝 Community Support
 
