@@ -1,0 +1,73 @@
+name: ✨Feature request
+description: Suggest a new feature or improvement for Awtly
+title: "[Feature]: (short description here)"
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve **Awtly**!
+
+        Please describe your idea as clearly as possible.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What is your idea or feature suggestion?
+      description: Describe the feature or improvement you would like to see in Awtly.
+      placeholder: |
+        Example:
+        Add support for transpiling to C#.
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: How would this feature improve Awtly?
+      placeholder: |
+        Explain why this feature would be useful and what problem it solves.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you considered another way to solve this problem?
+      placeholder: |
+        Describe any alternative solutions or workarounds you have tried.
+    validations:
+      required: false
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or use cases
+      description: Show an example of how this feature would be used.
+      placeholder: |
+        Example code, command line, screenshots, mockups, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Links to documentation, projects or tools related to this feature.
+      placeholder: |
+        https://...
+        https://...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched the existing Issues to make sure this feature has not already been requested.
+          required: true
