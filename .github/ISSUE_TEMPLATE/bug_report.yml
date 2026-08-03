@@ -70,6 +70,5 @@ body:
       value: |
         ## Debug Log
 
-        If Awtly generated a **debug.log** file, **please drag and drop it into the issue after opening it**.
-
+        If Awtly generated a **debug.log** file, ** please attach it into the corresponding section.
         The log file usually contains the information needed to reproduce the problem.
