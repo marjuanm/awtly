@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Report a bug in Awtly
-title: "\[BUG] "
+title: "[BUG] "
 labels: bug
 ---
 ## Describe the problem
