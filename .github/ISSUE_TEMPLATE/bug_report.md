@@ -18,11 +18,9 @@ Expected behavior:
 
 Environment:
 -------------------
-- Awtly version:
-- Python version:
-- Operating System:
+- Awtly version: 
+- Python version: 
+- Operating System: 
 
+(Don't forget to attach the `debug.log`, if you have it, to provide more information to the developer.)
 Attach debug.log
--------------------
-Drag the generated `debug.log` here.
-
