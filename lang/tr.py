@@ -63,6 +63,10 @@ MESSAGES = {
     "Belirtilen projede yeni bir sayfa oluşturmak için gerekli olan dosyaları ekler",
   "INVALIDPAGENAME":
     "Projeye eklenecek sayfanın adı dosya uzantıları içermemelidir.",
+  "UNKNOWNLANGUAGE":
+    "Bilinmeyen dil.",
+  "ALREADYERRORSFOUND":
+    "Yürütme sırasında hatalar bulundu, lütfen hata ayıklama dosyanızı kontrol edin.",
   "INVALIDID":
     "Geçersiz çeviri kimliği"
 }

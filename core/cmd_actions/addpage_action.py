@@ -5,7 +5,6 @@
 
 import os
 import shutil
-import locale
 
 from pathlib import Path
 from common.functions import getPath

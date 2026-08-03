@@ -3,10 +3,6 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-import os
-import shutil
-import locale
-
 from pathlib import Path
 from common.functions import getPath
 from core.translations import getTranslation
@@ -15,13 +11,13 @@ from core.cmd_templates.newwebsite import newWebsite
 # Purpose: Create a new project
 # Created date: 07/07/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 07/07/2026
+# Last modified date: 02/08/2026
 # Last modified username: Juan Manuel Mar Hdz.
 # Thanks to chatgpt
 def newProjectAction(projname, projtype, template):
     
   if template.strip() == "":
-    template = "templates/websites/blank"
+    template = "templates/php/websites/blank"
     
   if projtype.strip() == "":
     projtype = "website"

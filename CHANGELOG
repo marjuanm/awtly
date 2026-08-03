@@ -1,3 +1,11 @@
+0.3.0
+
+- Various fixes to the translation module; it was failing to work with regional languages ​​(in some cases) and would display the neutral language version—or English—under certain circumstances.
+
+- Various reorganizations and code cleanup.
+
+- Awtly now includes a configuration file where you can specify whether to run in debug mode. If enabled, all errors are sent to a (configurable) .log file; otherwise, errors are displayed in the console from which the application was launched. This may be improved later; debug mode is disabled by default.
+
 0.2.8
 
 - Rewrote the help module to incorporate new parameters for creating or adding pages to the project. Awtly now also supports help requests using "command /?" format.
@@ -9,6 +17,7 @@
 0.2.6
 
 - A very preliminary version of what the .awcp and PHP files for transpiling graphical components might look like.
+
 - A very preliminary version of the "build" command; so far, it only checks for the presence of the "project.cfg" file in the project folder, and if found, extracts the "ndex"and "ssets" Keys to proceed with the compilation process.
 
 0.2.5

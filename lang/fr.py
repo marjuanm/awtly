@@ -63,6 +63,10 @@ MESSAGES = {
     "Ajoute les fichiers requis pour créer une nouvelle page dans le projet spécifié",
   "INVALIDPAGENAME":
     "Le nom de la page à ajouter au projet ne doit pas contenir d'extensions de fichier.",
+  "UNKNOWNLANGUAGE":
+    "Langue inconnue.",
+  "ALREADYERRORSFOUND":
+    "Erreurs trouvées pendant l'exécution, veuillez vérifier votre fichier de débogage.",
   "INVALIDID":
     "ID de traduction invalide"
 }

@@ -5,7 +5,6 @@
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
 from pathlib import Path
-
 from core.translations import getTranslation
 
 # Purpose: Get current path

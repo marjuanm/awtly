@@ -17,18 +17,18 @@ from common.constants import PROJECT_SHORT_NAME
 def getTranslation(msgid):
     
   REGIONAL_LANGS = {
-    ("es", "mexico"): "lang.es_mx",
-    ("Spanish", "Mexico"): "lang.es_mx",
-    ("es", "spain"): "lang.es_es",
-    ("Spanish", "Spain"): "lang.es_ES",
-    ("en", "united states"): "lang.en_us",
-    ("English", "United States"): "lang.en_us",
-    ("en", "great britain"): "lang.en_gb",
-    ("English", "Great Britain"): "lang.en_gb",
-    ("pt", "portugal"): "lang.pt_pt",
-    ("Portuguese", "Portugal"): "lang.pt_pt",
-    ("pt", "brazil"): "lang.pt_br",
-    ("Portuguese", "Brazil"): "lang.pt_br",
+    ("es", "mexico"): "lang.es_MX",
+    ("spanish", "mexico"): "lang.es_MX",
+    ("es", "spain"): "lang.es_ES",
+    ("spanish", "spain"): "lang.es_ES",
+    ("en", "united states"): "lang.en_US",
+    ("english", "united States"): "lang.en_US",
+    ("en", "great britain"): "lang.en_GB",
+    ("english", "great britain"): "lang.en_GB",
+    ("pt", "portugal"): "lang.pt_PT",
+    ("portuguese", "portugal"): "lang.pt_PT",
+    ("pt", "brazil"): "lang.pt_BR",
+    ("portuguese", "brazil"): "lang.pt_BR",
   }
 
   SUPPORTED_LANGS = {
@@ -48,21 +48,22 @@ def getTranslation(msgid):
   country = ""
   lang, encoding = locale.getlocale()
   #lang = "zh"
-  
+  #lang = "xyz"
+
   if lang:
 
     parts = lang.split("_", 1)
     language = parts[0].lower()
-
+   
     if len(parts) > 1:
       country = parts[1].lower()
 
     # Load regional language file
     module = REGIONAL_LANGS.get((language, country))
-    
+
     # If fail, load generic file
     if module is None:
-            
+        
       if lang.lower().startswith("es") or lang.lower().startswith("spanish"):
         module = SUPPORTED_LANGS.get(language, "lang.es")
       elif lang.lower().startswith("ar") or lang.lower().startswith("arab"):
@@ -81,12 +82,12 @@ def getTranslation(msgid):
         module = SUPPORTED_LANGS.get(language, "lang.zh")
       else:
         module = SUPPORTED_LANGS.get(language, "lang.en")
-      
+        
     try:
       trans = importlib.import_module(module)
 
-    except ModuleNotFoundError:
-      
+    except ModuleNotFoundError as e:
+
       # Load generic english file if all fail already
       trans = importlib.import_module("lang.en")
 

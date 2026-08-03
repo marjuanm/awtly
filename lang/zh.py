@@ -63,6 +63,10 @@ MESSAGES = {
     "添加在指定项目中创建新页面所需的物理文件",
   "INVALIDPAGENAME":
     "要添加到项目中的页面名称不能包含文件扩展名。",
+  "UNKNOWNLANGUAGE": 
+    "未知语言。",
+  "ALREADYERRORSFOUND":
+    "执行过程中发现错误，请 menu 检查您的调试文件。",
   "INVALIDID":
     "翻译 ID 无效"
 }

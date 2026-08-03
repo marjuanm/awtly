@@ -63,6 +63,10 @@ MESSAGES = {
     "Fügt die erforderlichen Dateien hinzu, um eine neue Seite im angegebenen Projekt zu erstellen",
   "INVALIDPAGENAME":
     "Der Name der zum Projekt hinzuzufügenden Seite darf keine Dateiendungen enthalten.",
+  "UNKNOWNLANGUAGE":
+    "Unbekannte Sprache.",
+  "ALREADYERRORSFOUND":
+    "Während der Ausführung wurden Fehler gefunden. Bitte überprüfen Sie Ihre Debug-Datei.",
   "INVALIDID":
     "Ungültige Übersetzungs-ID"
 }
