@@ -1,0 +1,74 @@
+name: 'Bug report'
+description: 'Report a bug in Awtly'
+title: [BUG]: (short description here)'
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: 'Describe the problem'
+      placeholder: 'A clear and concise description of what the bug is.'
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 'Steps to reproduce'
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 'Expected behavior'
+      placeholder: 'A clear and concise description of what you expected to happen.'
+    validations:
+      required: true
+
+  - type: input
+    id: awtly-version
+    attributes:
+      label: 'Awtly version'
+      placeholder: 'e.g. v1.2.0'
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: 'Python version'
+      placeholder: 'e.g. 3.10.12'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 'Operating System'
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 'Debug Log'
+      description: "Don't forget to attach or paste the `debug.log` to provide more information to the developer."
+      placeholder: 'Paste your debug.log content here or drag and drop the file into this field.'
+    validations:
+      required: false
