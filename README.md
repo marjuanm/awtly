@@ -20,7 +20,7 @@ The goal is someday to be able create complex applications for PHP, perhaps comp
 
 # 🚀 Updates for the latest version (0.3.0):
 
-Rewrote the help module to incorporate new parameters for creating or adding pages to the project. Awtly now also supports help requests using "command /?" format.
+Awtly advances to version 0.3.0 with a simple bug-tracking system, fixes to the translation system, and various optimizations.
 
 # 📋 License:
 
