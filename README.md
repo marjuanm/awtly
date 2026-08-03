@@ -93,3 +93,12 @@ Awtly is a free project licensed under the GPL-3; anyone can download the source
 * If you are a sponsor and wish for your request to be considered with such priority (this feature is not yet enabled in this repository), please include a reference that identifies your sponsorship or donation, such as a link to your GitHub Sponsors profile or proof of a donation made via another method.
 * All bug fixes, improvements, and new features will be published in the official Awtly repositories. Prioritizing a request does not mean the improvements are exclusive to sponsors; once implemented, they will be available to the entire community in accordance with the project's license.
 * Pull requests are always welcome. Contributions that are high-quality, properly documented, include tests where possible, and adhere to the project's development style are more likely to be accepted.
+
+# 🐛 Report bugs or submit suggestions
+
+If you encounter an error in Awtly, please submit a detailed report describing the issue; we will analyze the case and aim to fix the error promptly. However, please keep the previous point in mind regarding how priorities are set when addressing error reports.
+
+If you have a suggestion for improving Awtly, feel free to share it; we will gladly review it, and if it proves feasible, it may be implemented. Please select one of the following links to continue:
+
+* [Report a bug](https://github.com/marjuanm/awtly/issues/new?template=bug_report.yml)
+* [Submit a suggestion](https://github.com/marjuanm/awtly/issues/new?template=feature_request.yml)
