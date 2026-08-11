@@ -18,9 +18,9 @@ The goal is someday to be able create complex applications for PHP /other langua
 - [ ] 🔄 Native PHP code generator
 - [ ] 📦 Support for external libraries and other add-ons.
 
-# 🚀 Updates for the latest version (0.3.0):
+# 🚀 Updates for the latest version (0.3.1):
 
-Awtly advances to version 0.3.0 with a simple bug-tracking system, fixes to the translation system, and various optimizations.
+Awtly now detects the "target" parameter following "build" to determine the target language for transpilation.
 
 # 📋 License:
 
