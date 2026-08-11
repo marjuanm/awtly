@@ -1,14 +1,14 @@
 <p align="center">
     <img src="https://www.busquedaweb.com/openprojects/awtly/pet.png?v=3" width="auto" height="331" alt="Awtly's pet"><br>
-    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=17" height="20" alt="Release version"></a>
+    <a href="https://github.com/marjuanm/awtly/blob/main/history.txt"><img src="https://www.busquedaweb.com/openprojects/awtly/release.png?v=18" height="20" alt="Release version"></a>
     <a href="https://github.com/marjuanm/awtly/archive/refs/heads/main.zip"><img src="https://www.busquedaweb.com/openprojects/awtly/download.png" height="20" alt="Download current version"></a>
     <a href="https://github.com/marjuanm/awtly/blob/main/LICENSE"><img src="https://www.busquedaweb.com/openprojects/awtly/license.png" height="20" alt="Project's license"></a>
 </p>
 
 # What is Awtly?
-Awtly is an ongoing project still in a very preliminary version, the goal is create a programming language that is very easy to learn, inspired by <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a>, <a href="https://en.wikipedia.org/wiki/Lua" target="_blank">Lua</a>, and others, which will allow creating PHP projects from simple to complex with instructions and methodologies that are easy to understand.
+Awtly is an ongoing project still in a very preliminary version, the goal is create a programming language that is very easy to learn, inspired by <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a>, <a href="https://en.wikipedia.org/wiki/Lua" target="_blank">Lua</a>, and others, which will allow creating PHP / other languages projects from simple to complex with instructions and methodologies that are easy to understand.
 
-The goal is someday to be able create complex applications for PHP, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
+The goal is someday to be able create complex applications for PHP /other languages, perhaps competing with what is seen in Laravel but without its complexity, through a language that is easy to maintain. I don't know if I will achieve this or not, but I will try.
 
 # 🗺️ Development Roadmap
 
@@ -63,8 +63,8 @@ Add a new page structure to the project folder.
 * `python awtly.py delete projectname`<br>
 Delete an Awtly project in the current folder or another. Use with caution.
 
-* `python awtly.py build projectname`<br>
-It will convert an Awtly project in the current folder or anothers to its PHP equivalent, allowing with a simple language to create websites and applications without getting into many complications of some PHP frameworks. For now we will only receive the message "I will convert the project 'projectname' into its PHP equivalent".
+* `python awtly.py build projectname language/target=language`<br>
+It will convert an Awtly project in the current folder or anothers to PHP / other languages equivalent, allowing with a simple language to create websites and applications without getting into many complications of some PHP frameworks. For now we will only receive the message "Compile to PHP".
 
 * `python awtly.py help` ("/?" and "-h" are possible variations)<br>
 This will display specific help if you type the name of a command after the command "help" or "-h" (for example, "awtly help new" or "awtly -h new"). If you only type "help", "/?", or just "-h", it will display general help for all commands supported by Awtly.
