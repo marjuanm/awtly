@@ -3,7 +3,7 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-from common.constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME, DEBUG_FILE_URLS
 
 # Generic Russian translation file
 MESSAGES = {
@@ -66,7 +66,7 @@ MESSAGES = {
   "UNKNOWNLANGUAGE":
     "Неизвестный язык.",
   "ALREADYERRORSFOUND":
-    "Обнаружены ошибки во время выполнения, пожалуйста, проверьте ваш файл отладки.",
+    "Обнаружены ошибки во время выполнения, файл debug.log был создан / обновлен.\nПожалуйста, проверьте ваш файл отладки, хотите сообщить об ошибке?, пожалуйста, перейдите по следующим ссылкам:\n\n" + DEBUG_FILE_URLS,
   "INVALIDID":
     "Неверный ID перевода"
 }

@@ -3,7 +3,7 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-from common.constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME, DEBUG_FILE_URLS
 
 # Generic Arab translation file
 MESSAGES = {
@@ -66,7 +66,7 @@ MESSAGES = {
   "UNKNOWNLANGUAGE": 
     "لغة غير معروفة.",
   "ALREADYERRORSFOUND":
-    "تم العثور على أخطاء أثناء التنفيذ، يرجى مراجعة ملف التصحيح الخاص بك.",
+    "تم العثور على أخطاء أثناء التنفيذ، تم إنشاء/تحديث ملف debug.log.\nيرجى مراجعة ملف التصحيح الخاص بك، هل تود الإبلاغ؟ يرجى زيارة الروابط التالية:\n\n" + DEBUG_FILE_URLS,
   "INVALIDID":
     "معرف ترجمة غير صالح"
 }

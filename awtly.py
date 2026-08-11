@@ -22,7 +22,7 @@ from core.commands import newProject, addPage, deleteProject, buildProject, help
 # Purpose: Main function
 # Created date: 02/08/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 02/08/2026
+# Last modified date: 10/08/2026
 # Last modified username: Juan Manuel Mar Hdz.
 def main():
   #x = 1 / 0 #test debug system
@@ -101,8 +101,35 @@ def main():
     
       if projname.strip().lower() == "/?":
         helpAction("build")
+      elif len(sys.argv) <= 2:
+        print(getTranslation("INCOMPLETECOMMAND"))  
       else:
-        buildProject(projname)
+          
+        if len(sys.argv) == 3:
+          buildProject(projname, "php")
+        else:
+            
+          # clear target parameter
+          
+          target = sys.argv[3].strip()
+          target = target.replace("'", "")
+          target = target.replace('\"', "")
+          
+          # get target language
+          
+          if "target=" in target.lower():
+              
+            key, value = target.split("=", 1)
+            key = key.strip()
+            value = value.strip()
+            
+            if value.strip() == "":
+              value = "php"
+            
+            buildProject(projname, value.strip())
+
+          else:
+            buildProject(projname, target.strip())
   
     elif cmd.lower() == "help" or cmd.lower() == "/?" or cmd.lower() == "-h":
       

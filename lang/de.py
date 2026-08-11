@@ -3,7 +3,7 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-from common.constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME, DEBUG_FILE_URLS
 
 # Generic German translation file
 MESSAGES = {
@@ -66,7 +66,7 @@ MESSAGES = {
   "UNKNOWNLANGUAGE":
     "Unbekannte Sprache.",
   "ALREADYERRORSFOUND":
-    "Während der Ausführung wurden Fehler gefunden. Bitte überprüfen Sie Ihre Debug-Datei.",
+    "Während der Ausführung wurden Fehler gefunden, eine debug.log-Datei wurde erstellt/aktualisiert.\nBitte überprüfen Sie Ihre Debug-Datei. Möchten Sie dies melden? Bitte besuchen Sie die folgenden Links:\n\n" + DEBUG_FILE_URLS,
   "INVALIDID":
     "Ungültige Übersetzungs-ID"
 }

@@ -41,10 +41,10 @@ def deleteProject(projname):
 # Purpose: Build a project (transpiler action)
 # Created date: 08/06/2026
 # Created by username: Juan Manuel Mar Hdz.
-# Last modified date: 28/07/2026
+# Last modified date: 10/08/2026
 # Last modified username: Juan Manuel Mar Hdz.
-def buildProject(projname):
-  buildProjectAction(projname)
+def buildProject(projname, target):
+  buildProjectAction(projname, target.strip())
   
 # Purpose: Show version
 # Created date: 10/06/2026

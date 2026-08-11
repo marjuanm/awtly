@@ -1,3 +1,9 @@
+0.3.1
+
+- Awtly now detects the "target" parameter following "build" to determine the target language for transpilation.
+
+- Minor correction to error submission service for Awtly on GitHub; the error handler was modified to display the link where the debug file can be submitted.
+
 0.3.0
 
 - Various fixes to the translation module; it was failing to work with regional languages ​​(in some cases) and would display the neutral language version—or English—under certain circumstances.

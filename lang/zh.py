@@ -3,7 +3,7 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-from common.constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME, DEBUG_FILE_URLS
 
 # Generic simplified Chinese translation file
 MESSAGES = {
@@ -66,7 +66,7 @@ MESSAGES = {
   "UNKNOWNLANGUAGE": 
     "未知语言。",
   "ALREADYERRORSFOUND":
-    "执行过程中发现错误，请 menu 检查您的调试文件。",
+    "执行过程中发现错误，已创建/更新 debug.log 文件。\n请检查您的调试文件，是否提交报告？请访问以下链接:\n\n" + DEBUG_FILE_URLS,
   "INVALIDID":
     "翻译 ID 无效"
 }

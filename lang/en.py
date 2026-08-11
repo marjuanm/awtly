@@ -3,7 +3,7 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-from common.constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME, DEBUG_FILE_URLS
 
 # Generic English translation file
 MESSAGES = {
@@ -66,7 +66,7 @@ MESSAGES = {
   "UNKNOWNLANGUAGE":
     "Unknown language.",
   "ALREADYERRORSFOUND":
-    "Errors found during execution, please check your debug file.",
+    "Errors found during execution, a debug.log file has been created / updated.\nPlease check your debug file, report?, please visit the following links:\n\n" + DEBUG_FILE_URLS,
   "INVALIDID":
     "Invalid translation ID"
 }

@@ -3,7 +3,7 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-from common.constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME, DEBUG_FILE_URLS
 
 # Generic French translation file
 MESSAGES = {
@@ -66,7 +66,7 @@ MESSAGES = {
   "UNKNOWNLANGUAGE":
     "Langue inconnue.",
   "ALREADYERRORSFOUND":
-    "Erreurs trouvées pendant l'exécution, veuillez vérifier votre fichier de débogage.",
+    "Erreurs trouvées pendant l'exécution, un fichier debug.log a été créé / mis à jour.\nVeuillez vérifier votre fichier de débogage, signaler?, veuillez visiter les liens suivants:\n\n" + DEBUG_FILE_URLS,
   "INVALIDID":
     "ID de traduction invalide"
 }

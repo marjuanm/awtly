@@ -3,7 +3,7 @@
 # Copyright (c) 2026 Juan Manuel Mar Hdz. / Awtly & Contributors
 # Licensed under GPL-3.0, see the license file on the root project structure for more information.
 
-from common.constants import PROJECT_SHORT_NAME
+from common.constants import PROJECT_SHORT_NAME, DEBUG_FILE_URLS
 
 # Spain translation
 MESSAGES = {
@@ -66,7 +66,7 @@ MESSAGES = {
   "UNKNOWNLANGUAGE":
     "Lenguaje desconocido.",
   "ALREADYERRORSFOUND":
-    "Errores encontrados durante la ejecución, revise su archivo de depuración.",
+    "Errores encontrados durante la ejecución, se ha creado / actualizado un archivo debug.log.\nRevise su archivo de depuración, ¿desea reportarlo?, por favor visite los siguientes enlaces:\n\n" + DEBUG_FILE_URLS,
   "INVALIDID":
     "ID de traducción no válido."
 }
